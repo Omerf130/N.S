@@ -1,0 +1,15 @@
+@use "./styles/variables" as *;
+.app {
+  .nav-wrapper {
+    position: fixed;
+    background-color: $light-grey;
+    .hamburger-icon {
+      color: $black;
+    }
+    .nav-item {
+      color: $black;
+      font-weight: bold;
+      font-size: 20px;
+    }
+  }
+}
