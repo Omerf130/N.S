@@ -3,6 +3,7 @@
   .nav-wrapper {
     position: fixed;
     background-color: $white;
+    z-index: 9;
     .hamburger-icon {
       color: $black;
     }
