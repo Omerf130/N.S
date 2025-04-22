@@ -5,7 +5,7 @@ export default function Projects() {
     <Box id="Projects" sx={{ py: 8 }}>
       <Container>
         <Typography variant="h4" gutterBottom>
-          מי אני?
+         פרויקטים
         </Typography>
         <Typography>
           אני נזי שרון, מעצבת פנים עם תשוקה אמיתית לאומנות עיצוב החללים, ובפרט
