@@ -7,7 +7,8 @@ export default function Hero() {
       sx={{
         position: "relative",
         height: "100vh",
-        backgroundImage: 'url("/pics/gallery/WhatsApp Image 2025-04-21 at 17.32.48 (1).jpeg")',
+        backgroundImage:
+          'url("/pics/gallery/WhatsApp Image 2025-04-22 at 18.10.30.jpeg")',
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundAttachment: "fixed",
@@ -35,13 +36,18 @@ export default function Hero() {
         }}
       />
 
-      <Typography
-        variant="h3"
-        component="h1"
-        sx={{ position: "relative", zIndex: 2 }}
-      >
-        Welcome to My Static Site
-      </Typography>
+      <Box sx={{ position: "relative", zIndex: 2 }}>
+        <Typography variant="h1" component="h1">
+          Nazi Sharon
+        </Typography>
+
+        <Typography variant="h3" sx={{ mt: 2 }}>
+           מהדמיון... למציאות... 💫
+        </Typography>
+        <Typography variant="h5" sx={{ mt: 2 }}>
+          פתרונות יצירתיים, תוצאות יצירתיות
+        </Typography>
+      </Box>
     </Box>
   );
 }
