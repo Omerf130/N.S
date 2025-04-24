@@ -1,4 +1,5 @@
 import { Box, Container, Paper, Typography } from "@mui/material";
+import { useMediaMatch } from "../hooks/useMediaMatch";
 
 const data = [
   {
@@ -50,22 +51,26 @@ const data = [
 ];
 
 export default function Plans() {
+  const isMobile = useMediaMatch("(max-width: 768px)");
+
   return (
     <Box id="plans" sx={{ py: 8, position: "relative", zIndex: 2 }}>
-      <Container sx={{ display: "flex", flexDirection: "column", gap: 4 }}>
-        <Typography variant="h3">המסע שלנו ביחד:</Typography>
-        <Typography variant="h5">
-          לאחר פגישת היכרות, בה אבין את הצרכים והרצונות שלכם, נבחר יחד קונספט
-          עיצובי. במהלך התהליך, אני אציג בפניכם את השלבים השונים בכדי להבטיח
-          שהפרויקט יענה על הציפיות שלכם ויהיה מותאם אישית לצרכים שלכם. להלן
-          פירוט של כל שלב:
-        </Typography>
+      <Container className="plans-container" sx={{ flexDirection: isMobile ? "column" : "row", }}>
+        <Box sx={{position: isMobile ? "static" : "sticky", top:"80px",height: "250px" }}>
+          <Typography variant="h3">המסע שלנו ביחד:</Typography>
+          <Typography variant="h5">
+            לאחר פגישת היכרות, בה אבין את הצרכים והרצונות שלכם, נבחר יחד קונספט
+            עיצובי. במהלך התהליך, אני אציג בפניכם את השלבים השונים בכדי להבטיח
+            שהפרויקט יענה על הציפיות שלכם ויהיה מותאם אישית לצרכים שלכם. להלן
+            פירוט של כל שלב:
+          </Typography>
+        </Box>
         <Box
           sx={{
             display: "flex",
             flexDirection: "column",
             gap: 4,
-            margin: "0 20px",
+            margin: `${isMobile ? "0" : "0 20px"}`,
             alignItems: "stretch",
             "@media (max-width:750px)": {
               flexDirection: "column",
@@ -78,20 +83,20 @@ export default function Plans() {
               sx={{
                 flex: 1,
                 display: "flex",
-                alignItems: "stretch",
+                justifyContent: isMobile ? "center" : "flex-end",
                 zIndex: item.id,
                 position: "sticky",
-                top: "100px",
+                top: "80px",
               }}
             >
               <Paper
                 elevation={3}
                 sx={{
-                  padding: 8,
+                  padding: isMobile ? 2 : 4,
                   borderRadius: 3,
-                  height:"50vw",
-                  width: "70%",
-                  overflow:"hidden",
+                  height: `clamp(430px, 25vw, 500px)`,
+                  width: `${isMobile ? "95%" : "450px"}`,
+                  overflow: "hidden",
                   textAlign: "center",
                   transition: "transform 0.3s ease",
                   "&:hover": {
@@ -110,7 +115,9 @@ export default function Plans() {
                   }}
                 >
                   {item.desc.map((part) => (
-                    <Typography textAlign={"right"} variant="body1">{part}</Typography>
+                    <Typography textAlign={"right"} variant="body1">
+                      {part}
+                    </Typography>
                   ))}
                 </Box>
               </Paper>

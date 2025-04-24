@@ -7,10 +7,13 @@ import Navbar from "./components/Navbar";
 import "./App.scss";
 import Plans from "./components/Plans";
 import Projects from "./components/Projects";
+import { useMediaMatch } from "./hooks/useMediaMatch";
 
 function App() {
+  const isMobile = useMediaMatch("(max-width: 768px)");
+
   return (
-    <div className="app">
+    <div className={`app ${isMobile ? "mobileView" : ""}`}>
       <CssBaseline />
       <Navbar />
       <Box
