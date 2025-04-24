@@ -89,7 +89,9 @@ export default function Plans() {
                 sx={{
                   padding: 8,
                   borderRadius: 3,
+                  height:"50vw",
                   width: "70%",
+                  overflow:"hidden",
                   textAlign: "center",
                   transition: "transform 0.3s ease",
                   "&:hover": {
