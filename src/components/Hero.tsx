@@ -11,17 +11,12 @@ export default function Hero() {
           'url("/pics/gallery/WhatsApp Image 2025-04-22 at 18.10.30.jpeg")',
         backgroundSize: "cover",
         backgroundPosition: "center",
-        backgroundAttachment: "fixed",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
         textAlign: "center",
         color: "white",
         overflow: "hidden",
-        // "@media (max-width:600px)": {
-        //   backgroundRepeat: "no-repeat",
-        //   backgroundSize: "contain"
-        // },
       }}
     >
       <Box
@@ -42,7 +37,7 @@ export default function Hero() {
         </Typography>
 
         <Typography variant="h3" sx={{ mt: 2 }}>
-           מהדמיון... למציאות... 💫
+           מהדמיון... למציאות...💫
         </Typography>
         <Typography variant="h5" sx={{ mt: 2 }}>
           פתרונות יצירתיים, תוצאות יצירתיות

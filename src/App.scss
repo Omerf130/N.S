@@ -1,21 +1,53 @@
 @use "./styles/variables" as *;
+* {
+  color: $light-red;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $medium-red;
+  }
+}
 .app {
   .nav-wrapper {
     position: fixed;
     background-color: $white;
     z-index: 9;
     .hamburger-icon {
-      color: $black;
+      // color: $black;
     }
     .nav-item {
-      color: $black;
+      color: $light-red;
       font-weight: bold;
       font-size: 20px;
     }
   }
+  #hero {
+    h1,
+    h3,
+    h5 {
+      color: $white;
+    }
+  }
   #plans {
+    h3 {
+      animation: slideUpFadeIn 1s ease-out forwards;
+    }
     .list-item-inner {
       background-color: $light-grey;
     }
+  }
+}
+
+@keyframes slideUpFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
