@@ -56,7 +56,7 @@ export default function Plans() {
   return (
     <Box id="plans" sx={{ py: 8, position: "relative", zIndex: 2 }}>
       <Container className="plans-container" sx={{ flexDirection: isMobile ? "column" : "row", }}>
-        <Box sx={{position: isMobile ? "static" : "sticky", top:"80px",height: "250px" }}>
+        <Box sx={{position: isMobile ? "static" : "sticky", top:"80px",height: isMobile ? "unset" : "250px" }}>
           <Typography variant="h3">המסע שלנו ביחד:</Typography>
           <Typography variant="h5">
             לאחר פגישת היכרות, בה אבין את הצרכים והרצונות שלכם, נבחר יחד קונספט
