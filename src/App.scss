@@ -20,6 +20,9 @@
       font-weight: bold;
       font-size: 20px;
     }
+    .hamburger-icon {
+      color: $light-red;
+    }
   }
   #hero {
     h1,
@@ -78,4 +81,65 @@
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+
+
+/* Main container styling */
+.thumbnail-carousel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+  width: 100%;
+}
+
+/* Main carousel image container */
+.thumbnail-carousel .splide__slide img {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* This will ensure images are properly cropped */
+  border-radius: 10px;
+}
+
+/* Style for the thumbnail images */
+.thumbnail-carousel .splide__slide img {
+  border-radius: 5px;
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+/* Thumbnail carousel styles */
+.thumbnail-carousel .splide__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.thumbnail-carousel .splide__slide {
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Hover effect for thumbnails */
+.thumbnail-carousel .splide__slide img:hover {
+  transform: scale(1.1);
+}
+
+/* Focus effect for active thumbnails */
+.splide__slide.is-active img {
+  border: 3px solid #ff5722;
+  transform: scale(1.1);
+}
+
+/* Optional: Styling for carousel container width */
+.splide {
+  width: 80%; /* Adjust the size of the main carousel */
+  margin: 0 auto;
+}
+
+.splide__arrow {
+  display: none !important; /* Hide arrows for simplicity */
 }

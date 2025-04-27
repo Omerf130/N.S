@@ -1,9 +1,11 @@
-import { Box, Typography } from "@mui/material";
+import React from 'react';
 
-export default function Footer() {
+const Footer: React.FC = () => {
   return (
-    <Box sx={{ py: 4, textAlign: "center", bgcolor: "grey.200" }}>
-      <Typography variant="body2">&copy; {new Date().getFullYear()} My Static Site</Typography>
-    </Box>
+    <footer style={{ position:"relative", margin:"40px 0 0 0", padding: '20px', textAlign: 'center', background: '#fff', color: 'rgb(192, 8, 57)', boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)', }}>
+      <p>&copy; Omer Faclieru. All rights reserved.</p>
+    </footer>
   );
 }
+
+export default Footer;

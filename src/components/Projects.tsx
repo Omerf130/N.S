@@ -1,21 +1,24 @@
-import { useEffect, useState } from 'react';
+import { useRef, useEffect, useState } from 'react';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/splide/dist/css/splide.min.css';
 
 const Projects = () => {
-  const [mainSplide, setMainSplide] = useState<any>(null);
-  const [thumbsSplide, setThumbsSplide] = useState<any>(null);
+  const mainRef = useRef(null);
+  const thumbsRef = useRef(null);
+  const [splideInstances, setSplideInstances] = useState({ main: null, thumbs: null });
 
   useEffect(() => {
-    if (mainSplide && thumbsSplide) {
-      mainSplide.sync(thumbsSplide);
+    if (splideInstances.main && splideInstances.thumbs) {
+        //@ts-ignore
+      splideInstances.main.sync(splideInstances.thumbs);
     }
-  }, [mainSplide, thumbsSplide]);
+  }, [splideInstances]);
 
   return (
     <div className='projects'>
       {/* Main Carousel */}
       <Splide
+        ref={mainRef}
         options={{
           type: 'fade',
           heightRatio: 0.5,
@@ -24,7 +27,8 @@ const Projects = () => {
           cover: true,
         }}
         onMounted={(splide:any) => {
-          setMainSplide(splide);
+          // Save the main Splide instance
+          setSplideInstances((prevState) => ({ ...prevState, main: splide }));
         }}
       >
         <SplideSlide>
@@ -40,10 +44,11 @@ const Projects = () => {
 
       {/* Thumbnails Carousel */}
       <Splide
+        ref={thumbsRef}
         options={{
           fixedWidth: 100,
           fixedHeight: 64,
-          isNavigation: true,
+          isNavigation: true, // tells splide that thumbs control another splide
           gap: 10,
           focus: 'center',
           pagination: false,
@@ -56,7 +61,8 @@ const Projects = () => {
           },
         }}
         onMounted={(splide:any) => {
-          setThumbsSplide(splide);
+          // Save the thumbs Splide instance
+          setSplideInstances((prevState) => ({ ...prevState, thumbs: splide }));
         }}
       >
         <SplideSlide>
