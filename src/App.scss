@@ -1,7 +1,6 @@
 @use "./styles/variables" as *;
 
 * {
-  color: $light-red;
   h1,
   h2,
   h3,
@@ -16,9 +15,6 @@
     position: fixed;
     background-color: $white;
     z-index: 9;
-    .hamburger-icon {
-      // color: $black;
-    }
     .nav-item {
       color: $light-red;
       font-weight: bold;
@@ -43,6 +39,33 @@
     .list-item-inner {
       background-color: $light-grey;
     }
+  }
+  // .projects {
+  //   width: 100%;
+  //   max-width: 900px;
+  //   margin: 0 auto;
+  //   padding: 20px 10px;
+  // }
+
+  // .projects img {
+  //   width: 100%;
+  //   height: auto;
+  //   object-fit: cover;
+  //   border-radius: 8px;
+  // }
+
+  // /* Optional: make thumbnails look a bit nicer */
+  // .thumbnail-carousel img {
+  //   border: 2px solid transparent;
+  //   transition: border-color 0.3s;
+  //   cursor: pointer;
+  // }
+
+  // .thumbnail-carousel .is-active img {
+  //   border-color: #007bff;
+  // }
+  .contact {
+ 
   }
 }
 

@@ -8,7 +8,7 @@ export default function Hero() {
         position: "relative",
         height: "100vh",
         backgroundImage:
-          'url("/pics/gallery/WhatsApp Image 2025-04-22 at 18.10.30.jpeg")',
+          'url("/pics/gallery/gallery1.jpeg")',
         backgroundSize: "cover",
         backgroundPosition: "center",
         display: "flex",
