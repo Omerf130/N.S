@@ -1,53 +1,67 @@
-import { useRef, useEffect, useState } from 'react';
-import { Splide, SplideSlide } from '@splidejs/react-splide';
-import '@splidejs/splide/dist/css/splide.min.css';
+import { useRef, useEffect, useState } from "react";
+import { Splide, SplideSlide } from "@splidejs/react-splide";
+import "@splidejs/splide/dist/css/splide.min.css";
+import { Typography } from "@mui/material";
+
+const galleryItems = [
+  { id: 1, src: "/pics/gallery/gallery1.jpeg", alt: "image1" },
+  { id: 2, src: "/pics/gallery/gallery2.jpeg", alt: "image2" },
+  { id: 3, src: "/pics/gallery/gallery3.jpeg", alt: "image3" },
+  { id: 4, src: "/pics/gallery/gallery4.jpeg", alt: "image4" },
+  { id: 5, src: "/pics/gallery/gallery5.jpeg", alt: "image5" },
+  { id: 6, src: "/pics/gallery/gallery6.jpeg", alt: "image6" },
+  { id: 7, src: "/pics/gallery/gallery7.jpeg", alt: "image7" },
+  { id: 8, src: "/pics/gallery/gallery8.jpeg", alt: "image8" },
+  { id: 9, src: "/pics/gallery/gallery9.jpeg", alt: "image9" },
+  { id: 10, src: "/pics/gallery/gallery10.jpeg", alt: "image10" },
+  { id: 11, src: "/pics/gallery/gallery11.jpeg", alt: "image11" },
+  { id: 12, src: "/pics/gallery/gallery12.jpeg", alt: "image12" },
+  { id: 13, src: "/pics/gallery/gallery13.jpeg", alt: "image13" },
+  { id: 14, src: "/pics/gallery/gallery14.jpeg", alt: "image14" },
+  { id: 15, src: "/pics/gallery/gallery15.jpeg", alt: "image15" },
+  { id: 16, src: "/pics/gallery/gallery16.jpeg", alt: "image16" },
+];
 
 const Gallery = () => {
   const mainRef = useRef(null);
   const thumbsRef = useRef(null);
-  const [splideInstances, setSplideInstances] = useState({ main: null, thumbs: null });
+  const [splideInstances, setSplideInstances] = useState({
+    main: null,
+    thumbs: null,
+  });
 
   useEffect(() => {
     // Once the Splide instances are available, sync them
     if (splideInstances.main && splideInstances.thumbs) {
-        //@ts-ignore
+      //@ts-ignore
       splideInstances.main.sync(splideInstances.thumbs);
     }
   }, [splideInstances]);
 
   return (
     <div>
+      {/* <Typography variant="h2">הפרויקטים שלי</Typography> */}
       {/* Main Carousel */}
       <Splide
         ref={mainRef}
         options={{
-          type: 'fade',
+          type: "fade",
           heightRatio: 0.5,
-          width:"1000px",
+          width: "1000px",
           pagination: false,
           arrows: false,
-          cover: true, 
+          cover: true,
         }}
-        onMounted={(splide:any) => {
+        onMounted={(splide: any) => {
           // Save the main Splide instance
           setSplideInstances((prevState) => ({ ...prevState, main: splide }));
         }}
       >
-        <SplideSlide>
-          <img src="https://images.unsplash.com/photo-1743485237407-e00bfb75163e?w=500&auto=format&fit=crop&q=60" alt="Image 1" />
-        </SplideSlide>
-        <SplideSlide>
-          <img src="https://plus.unsplash.com/premium_photo-1710865692399-6fe10f968711?w=500&auto=format&fit=crop&q=60" alt="Image 2" />
-        </SplideSlide>
-        <SplideSlide>
-          <img src="https://images.unsplash.com/photo-1744068631576-132a67696f5b?w=500&auto=format&fit=crop&q=60" alt="Image 3" />
-        </SplideSlide>
-        <SplideSlide>
-          <img src="https://images.unsplash.com/photo-1745666890553-68a1098c51ae?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwzfHx8ZW58MHx8fHx8" alt="Image 4" />
-        </SplideSlide>
-        <SplideSlide>
-          <img src="https://images.unsplash.com/photo-1745800227130-f61ca9d6bcb1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxNHx8fGVufDB8fHx8fA%3D%3D" alt="Image 5" />
-        </SplideSlide>
+        {galleryItems.map((item) => (
+          <SplideSlide key={item.id}>
+            <img src={item.src} alt={item.alt} />
+          </SplideSlide>
+        ))}
       </Splide>
 
       {/* Thumbnails Carousel */}
@@ -58,7 +72,7 @@ const Gallery = () => {
           fixedHeight: 114,
           isNavigation: true, // tells splide that thumbs control another splide
           gap: 10,
-          focus: 'center',
+          focus: "center",
           pagination: false,
           cover: true,
           breakpoints: {
@@ -68,26 +82,16 @@ const Gallery = () => {
             },
           },
         }}
-        onMounted={(splide:any) => {
+        onMounted={(splide: any) => {
           // Save the thumbs Splide instance
           setSplideInstances((prevState) => ({ ...prevState, thumbs: splide }));
         }}
       >
-        <SplideSlide>
-          <img src="https://images.unsplash.com/photo-1743485237407-e00bfb75163e?w=500&auto=format&fit=crop&q=60" alt="Thumbnail 1" />
-        </SplideSlide>
-        <SplideSlide>
-          <img src="https://plus.unsplash.com/premium_photo-1710865692399-6fe10f968711?w=500&auto=format&fit=crop&q=60" alt="Thumbnail 2" />
-        </SplideSlide>
-        <SplideSlide>
-          <img src="https://images.unsplash.com/photo-1744068631576-132a67696f5b?w=500&auto=format&fit=crop&q=60" alt="Thumbnail 3" />
-        </SplideSlide>
-        <SplideSlide>
-          <img src="https://images.unsplash.com/photo-1745666890553-68a1098c51ae?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwzfHx8ZW58MHx8fHx8" alt="Thumbnail 4" />
-        </SplideSlide>
-        <SplideSlide>
-          <img src="https://images.unsplash.com/photo-1745800227130-f61ca9d6bcb1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxNHx8fGVufDB8fHx8fA%3D%3D" alt="Thumbnail 5" />
-        </SplideSlide>
+        {galleryItems.map((item) => (
+          <SplideSlide key={item.id}>
+            <img src={item.src} alt={`Thumbnail ${item.id}`} />
+          </SplideSlide>
+        ))}
       </Splide>
     </div>
   );

@@ -11,7 +11,11 @@
   }
 }
 .app {
-  .nav-wrapper, #hero,#about, #plans ,.contact {
+  .nav-wrapper,
+  #hero,
+  #about,
+  #plans,
+  .contact {
     direction: rtl;
   }
   .nav-wrapper {
@@ -46,8 +50,41 @@
       background-color: $light-grey;
     }
   }
+  .services {
+    position: relative;
+    direction: rtl;
+    margin: 30px auto 60px auto;
+    h2 {
+      margin-bottom: 50px;
+    }
+    .services-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 150px;
+      div {
+        width: 180px;
+        height: 180px;
+        transform: rotate(45deg);
+        background-color: #fff;
+        border: 2px solid $light-red;
+        border-radius: 5px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        transition: transform 0.25s ease;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:hover {
+          transform: scale(1.2) rotate(45deg);
+        }
+        h6 {
+          transform: rotate(-45deg);
+          text-align: center;
+        }
+      }
+    }
+  }
   .contact {
- 
   }
 }
 
