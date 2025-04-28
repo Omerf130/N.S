@@ -1,7 +1,9 @@
 import { Box, Container, Typography } from "@mui/material";
 import SectionTitle from "../common/SectionTitle";
+import { useMediaMatch } from "../hooks/useMediaMatch";
 
 export default function About() {
+  const isMobile = useMediaMatch("(max-width: 500px)");
   return (
     <Box
       id="about"
@@ -44,9 +46,9 @@ export default function About() {
             maxHeight: 650,
           }}
         />
-        <Container sx={{ maxWidth: "sm" }}>
-          <SectionTitle title="נעים מאוד" className="about-title" variant="h2"/>
-          <Typography variant="h5" color="#424242">
+        <Container sx={{ maxWidth: "sm", padding:"0"}}>
+          <SectionTitle title="נעים מאוד" className="about-title" variant={isMobile ? "h3" : "h2"}/>
+          <Typography variant={isMobile ? "h6" : "h5"} color="#424242">
             אני נזי שרון, מעצבת פנים עם תשוקה אמיתית לאומנות עיצוב החללים, ובפרט
             בעיצוב מטבחים. עם ראש פתוח וייחודי, אני מאמינה כי כל אתגר הוא
             הזדמנות לחדש וליצור משהו מרגש. אני שואפת לחצות גבולות ולשבור מיתוסים

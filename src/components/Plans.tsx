@@ -45,7 +45,7 @@ const data = [
   {
     title: "שירות לאחר סיום הפרויקט",
     desc: [
-      "- לאחר סיום העבודה, אני זמין להמשך ייעוץ, פתרונות לתחזוקה ושיפורים נוספים בעתיד, על מנת להבטיח שהחלל שלכם יישאר בדיוק כפי שדמיינתם.",
+      "- לאחר סיום העבודה, אני זמינה להמשך ייעוץ, פתרונות לתחזוקה ושיפורים נוספים בעתיד, על מנת להבטיח שהחלל שלכם יישאר בדיוק כפי שדמיינתם.",
     ],
     id: "5",
   },
@@ -53,13 +53,14 @@ const data = [
 
 export default function Plans() {
   const isMobile = useMediaMatch("(max-width: 768px)");
+  const isMiniMobile = useMediaMatch("(max-width: 500px)");
 
   return (
     <Box id="plans" sx={{ py: 8, position: "relative", zIndex: 2 }}>
       <Container className="plans-container" sx={{ flexDirection: isMobile ? "column" : "row", }}>
         <Box sx={{position: isMobile ? "static" : "sticky", top:"80px",height: isMobile ? "unset" : "250px" }}>
-          <SectionTitle title="המסע שלנו ביחד:" className="plans-title" variant="h2"/>
-          <Typography variant="h5" color="#424242">
+          <SectionTitle title="המסע שלנו ביחד:" className="plans-title" variant={isMiniMobile ? "h3" : "h2"}/>
+          <Typography variant={isMiniMobile ? "h6" : "h5"} color="#424242">
             לאחר פגישת היכרות, בה אבין את הצרכים והרצונות שלכם, נבחר יחד קונספט
             עיצובי. במהלך התהליך, אני אציג בפניכם את השלבים השונים בכדי להבטיח
             שהפרויקט יענה על הציפיות שלכם ויהיה מותאם אישית לצרכים שלכם. להלן
