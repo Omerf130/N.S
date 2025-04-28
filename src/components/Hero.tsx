@@ -8,7 +8,7 @@ export default function Hero() {
         position: "relative",
         height: "100vh",
         backgroundImage:
-          'url("/pics/gallery/gallery1.jpeg")',
+          'url("/pics/gallery/gallery6.jpeg")',
         backgroundSize: "cover",
         backgroundPosition: "center",
         display: "flex",

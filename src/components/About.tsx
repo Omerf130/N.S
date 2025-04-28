@@ -47,7 +47,7 @@ export default function About() {
           <Typography variant="h4" gutterBottom>
             נעים מאד
           </Typography>
-          <Typography variant="h5">
+          <Typography variant="h5" color="#424242">
             אני נזי שרון, מעצבת פנים עם תשוקה אמיתית לאומנות עיצוב החללים, ובפרט
             בעיצוב מטבחים. עם ראש פתוח וייחודי, אני מאמינה כי כל אתגר הוא
             הזדמנות לחדש וליצור משהו מרגש. אני שואפת לחצות גבולות ולשבור מיתוסים

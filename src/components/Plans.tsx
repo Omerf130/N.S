@@ -58,7 +58,7 @@ export default function Plans() {
       <Container className="plans-container" sx={{ flexDirection: isMobile ? "column" : "row", }}>
         <Box sx={{position: isMobile ? "static" : "sticky", top:"80px",height: isMobile ? "unset" : "250px" }}>
           <Typography variant="h3">המסע שלנו ביחד:</Typography>
-          <Typography variant="h5">
+          <Typography variant="h5" color="#424242">
             לאחר פגישת היכרות, בה אבין את הצרכים והרצונות שלכם, נבחר יחד קונספט
             עיצובי. במהלך התהליך, אני אציג בפניכם את השלבים השונים בכדי להבטיח
             שהפרויקט יענה על הציפיות שלכם ויהיה מותאם אישית לצרכים שלכם. להלן

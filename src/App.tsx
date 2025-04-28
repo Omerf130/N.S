@@ -6,8 +6,10 @@ import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import "./App.scss";
 import Plans from "./components/Plans";
-import Projects from "./components/Projects";
 import { useMediaMatch } from "./hooks/useMediaMatch";
+import Services from "./components/Services";
+import Gallery from "./components/Gallery";
+import Rec from "./components/Rec";
 
 function App() {
   const isMobile = useMediaMatch("(max-width: 768px)");
@@ -19,7 +21,7 @@ function App() {
       <Box
         sx={{
           backgroundImage: 'url("/pics/hero.jpeg")',
-          position:"fixed",
+          position: "fixed",
           backgroundSize: "cover",
           backgroundPosition: "center",
           flexShrink: 0,
@@ -45,7 +47,9 @@ function App() {
         <Hero />
         <About />
         <Plans />
-        <Projects />
+        <Services />
+        <Rec />
+        <Gallery />
         <Contact />
       </Box>
       <Footer />
