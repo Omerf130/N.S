@@ -1,5 +1,6 @@
 import { Box, Container, Paper, Typography } from "@mui/material";
 import { useMediaMatch } from "../hooks/useMediaMatch";
+import SectionTitle from "../common/SectionTitle";
 
 const data = [
   {
@@ -57,7 +58,8 @@ export default function Plans() {
     <Box id="plans" sx={{ py: 8, position: "relative", zIndex: 2 }}>
       <Container className="plans-container" sx={{ flexDirection: isMobile ? "column" : "row", }}>
         <Box sx={{position: isMobile ? "static" : "sticky", top:"80px",height: isMobile ? "unset" : "250px" }}>
-          <Typography variant="h3">המסע שלנו ביחד:</Typography>
+          {/* <Typography variant="h3">המסע שלנו ביחד:</Typography> */}
+          <SectionTitle title="המסע שלנו ביחד:" className="plans-title"/>
           <Typography variant="h5" color="#424242">
             לאחר פגישת היכרות, בה אבין את הצרכים והרצונות שלכם, נבחר יחד קונספט
             עיצובי. במהלך התהליך, אני אציג בפניכם את השלבים השונים בכדי להבטיח
