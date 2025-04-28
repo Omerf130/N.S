@@ -1,4 +1,3 @@
-import { Typography } from "@mui/material";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/splide/dist/css/splide.min.css";
 import React from "react";
