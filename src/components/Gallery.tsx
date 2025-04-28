@@ -1,7 +1,6 @@
 import { useRef, useEffect, useState } from "react";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/splide/dist/css/splide.min.css";
-import { Typography } from "@mui/material";
 
 const galleryItems = [
   { id: 1, src: "/pics/gallery/gallery1.jpeg", alt: "image1" },
@@ -40,7 +39,6 @@ const Gallery = () => {
 
   return (
     <div>
-      {/* <Typography variant="h2">הפרויקטים שלי</Typography> */}
       {/* Main Carousel */}
       <Splide
         ref={mainRef}
