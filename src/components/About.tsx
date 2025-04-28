@@ -1,4 +1,5 @@
 import { Box, Container, Typography } from "@mui/material";
+import SectionTitle from "../common/SectionTitle";
 
 export default function About() {
   return (
@@ -44,9 +45,7 @@ export default function About() {
           }}
         />
         <Container sx={{ maxWidth: "sm" }}>
-          <Typography variant="h4" gutterBottom>
-            נעים מאד
-          </Typography>
+          <SectionTitle title="נעים מאוד" className="about-title" variant="h2"/>
           <Typography variant="h5" color="#424242">
             אני נזי שרון, מעצבת פנים עם תשוקה אמיתית לאומנות עיצוב החללים, ובפרט
             בעיצוב מטבחים. עם ראש פתוח וייחודי, אני מאמינה כי כל אתגר הוא

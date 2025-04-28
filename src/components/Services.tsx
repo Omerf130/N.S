@@ -1,4 +1,5 @@
 import { Box, Container, Paper, Typography } from "@mui/material";
+import SectionTitle from "../common/SectionTitle";
 
 const services = [
   { id: 1, text: "תכנון ועיצוב פנים" },
@@ -11,7 +12,7 @@ const services = [
 const Services = () => {
   return (
     <Container className="services">
-      <Typography variant="h2">שירותים</Typography>
+      <SectionTitle title="שירותים" className="services-title" variant="h2"/>
       <Paper className="services-list" sx={{backgroundColor:"transparent", border:"none", boxShadow:"unset"}}>
         {services.map((service) => (
           <Box

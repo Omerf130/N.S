@@ -1,26 +1,27 @@
-import { useInView } from 'react-intersection-observer';
+import { useInView } from "react-intersection-observer";
 import "../App.scss";
+import { Typography } from "@mui/material";
 
 interface SectionTitleProps {
-  title: string
-  className: string
-} 
+  title: string;
+  className: string;
+  variant: "h1" | "h2" | "h3" | "h4" | "h5" | "h6"
+}
 
-const SectionTitle = ({ title, className = '' }: SectionTitleProps) => {
+const SectionTitle = ({ title,variant, className = "" }: SectionTitleProps) => {
   const { ref, inView } = useInView({
-    threshold: 0.2, // התחל את האנימציה כש-20% מהכותרת נראית
-    triggerOnce: true, // הפעל את האנימציה רק פעם אחת
+    threshold: 0.2,
+    triggerOnce: true,
   });
 
-  console.log(inView)
-
   return (
-    <h2
+    <Typography
+      variant={variant}
       ref={ref}
-      className={`section-title ${className} ${inView ? 'fade-in' : ''}`}
+      className={`section-title ${className} ${inView ? "fade-in" : ""}`}
     >
       {title}
-    </h2>
+    </Typography>
   );
 };
 

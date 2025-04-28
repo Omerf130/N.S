@@ -2,6 +2,7 @@ import { Typography } from "@mui/material";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/splide/dist/css/splide.min.css";
 import React from "react";
+import SectionTitle from "../common/SectionTitle";
 
 const Rec: React.FC = () => {
   const recommendations = [
@@ -42,7 +43,9 @@ const Rec: React.FC = () => {
       className="rec-gallery"
       style={{ maxWidth: "800px", margin: "40px auto"}}
     >
-      <Typography variant="h2" sx={{position:"relative", textAlign:"center"}}>מה הלקוחות שלי אומרים</Typography>
+      {/* <Typography variant="h2" sx={{position:"relative", textAlign:"center"}}>מה הלקוחות שלי אומרים</Typography> */}
+      <SectionTitle title="מה הלקוחות שלי אומרים" className="rec-title" variant="h2"/>
+
       <Splide
         options={{
           type: "loop",

@@ -50,10 +50,17 @@
       background-color: $light-grey;
     }
   }
+  .rec-gallery {
+    margin: 20px auto;
+    .rec-title {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  }
   .services {
     position: relative;
     direction: rtl;
-    margin: 30px auto 60px auto;
+    margin: 30px auto 100px auto;
     h2 {
       margin-bottom: 50px;
     }
@@ -83,6 +90,9 @@
         }
       }
     }
+  }
+  .contact {
+    margin: 80px auto;
   }
 }
 

@@ -40,28 +40,29 @@ const Gallery = () => {
   return (
     <div>
       {/* Main Carousel */}
-      <Splide
-        ref={mainRef}
-        options={{
-          type: "fade",
-          heightRatio: 0.5,
-          width: "1000px",
-          pagination: false,
-          arrows: false,
-          cover: true,
-        }}
-        onMounted={(splide: any) => {
-          // Save the main Splide instance
-          setSplideInstances((prevState) => ({ ...prevState, main: splide }));
-        }}
-      >
-        {galleryItems.map((item) => (
-          <SplideSlide key={item.id}>
-            <img src={item.src} alt={item.alt} />
-          </SplideSlide>
-        ))}
-      </Splide>
-
+      <div style={{marginBottom:"10px"}}>
+        <Splide
+          ref={mainRef}
+          options={{
+            type: "fade",
+            heightRatio: 0.5,
+            width: "1000px",
+            pagination: false,
+            arrows: false,
+            cover: true,
+          }}
+          onMounted={(splide: any) => {
+            // Save the main Splide instance
+            setSplideInstances((prevState) => ({ ...prevState, main: splide }));
+          }}
+        >
+          {galleryItems.map((item) => (
+            <SplideSlide key={item.id}>
+              <img src={item.src} alt={item.alt} />
+            </SplideSlide>
+          ))}
+        </Splide>
+      </div>
       {/* Thumbnails Carousel */}
       <Splide
         ref={thumbsRef}
