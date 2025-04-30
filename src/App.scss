@@ -7,7 +7,7 @@
   h4,
   h5,
   h6 {
-    color: $medium-red;
+    color: $medium-grey;
   }
 }
 .app {
@@ -23,7 +23,7 @@
     background-color: $white;
     z-index: 9;
     .nav-item {
-      color: $light-red;
+      color: $medium-grey;
       font-weight: bold;
       font-size: 20px;
     }
