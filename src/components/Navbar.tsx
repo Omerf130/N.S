@@ -60,7 +60,7 @@ function Navbar() {
                     className="nav-item"
                     component="a"
                     href={`#${id}`}
-                    sx={{ textDecoration: "none", color: "rgba(192, 8, 57, 0.8)", width: "100%" }}
+                    sx={{ textDecoration: "none", color: "#9e9e9e", width: "100%" }}
                   >
                     {label}
                   </Typography>
