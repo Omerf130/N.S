@@ -6,18 +6,18 @@ const data = [
   {
     title: "קבלת לוח השראה",
     desc: [
-      "- כאן נבנה לוח השראה אישי שבו נבחר את החומרים, הגוונים והרהיטים שיתאימו לקונספט הנבחר.",
-      "- הלוח כולל דוגמאות של טקסטורות, צבעים ורהיטים, כדי להמחיש את האווירה הכללית והסגנון של החלל.",
-      "- נבחן יחד את האלמנטים השונים כדי לוודא שהכול מתואם עם החזון שלכם.",
+      "🪄 כאן נבנה לוח השראה אישי שבו נבחר את החומרים, הגוונים והרהיטים שיתאימו לקונספט הנבחר.",
+      "🪄 הלוח כולל דוגמאות של טקסטורות, צבעים ורהיטים, כדי להמחיש את האווירה הכללית והסגנון של החלל.",
+      "🪄 נבחן יחד את האלמנטים השונים כדי לוודא שהכול מתואם עם החזון שלכם.",
     ],
     id: "1",
   },
   {
     title: "הדמיה עבור החלל הנבחר",
     desc: [
-      "- ניצור הדמיה תלת-ממדית של החלל, שתאפשר לכם לראות כיצד כל אלמנט משתלב יחד.",
-      "- ההדמיה תכלול פרטי עיצוב כמו ריהוט, תאורה, צבעים ואפילו פרטים כמו צמחייה ואביזרים.",
-      "- בכך תוכלו לקבל תחושה מוחשית של החלל לפני ביצוע השינויים.",
+      "🪄 ניצור הדמיה תלת-ממדית של החלל, שתאפשר לכם לראות כיצד כל אלמנט משתלב יחד.",
+      "🪄 ההדמיה תכלול פרטי עיצוב כמו ריהוט, תאורה, צבעים ואפילו פרטים כמו צמחייה ואביזרים.",
+      "🪄 בכך תוכלו לקבל תחושה מוחשית של החלל לפני ביצוע השינויים.",
     ],
     id: "2",
   },
@@ -37,15 +37,15 @@ const data = [
   {
     title: "ייעוץ וליווי במהלך הביצוע",
     desc: [
-      "- במהלך תהליך הביצוע, אני אשמור על תקשורת קבועה עם הספקים והקבלנים, כדי לוודא שהפרויקט מתנהל בהתאם לתוכניות ולחזון שלכם.",
-      "- אני אהיה כאן כדי לענות על שאלות, לספק פתרונות ולבצע התאמות במידת הצורך.",
+      "🪄 במהלך תהליך הביצוע, אני אשמור על תקשורת קבועה עם הספקים והקבלנים, כדי לוודא שהפרויקט מתנהל בהתאם לתוכניות ולחזון שלכם.",
+      "🪄 אני אהיה כאן כדי לענות על שאלות, לספק פתרונות ולבצע התאמות במידת הצורך.",
     ],
     id: "4",
   },
   {
     title: "שירות לאחר סיום הפרויקט",
     desc: [
-      "- לאחר סיום העבודה, אני זמינה להמשך ייעוץ, פתרונות לתחזוקה ושיפורים נוספים בעתיד, על מנת להבטיח שהחלל שלכם יישאר בדיוק כפי שדמיינתם.",
+      "🪄 לאחר סיום העבודה, אני זמינה להמשך ייעוץ, פתרונות לתחזוקה ושיפורים נוספים בעתיד, על מנת להבטיח שהחלל שלכם יישאר בדיוק כפי שדמיינתם.",
     ],
     id: "5",
   },
@@ -57,9 +57,22 @@ export default function Plans() {
 
   return (
     <Box id="plans" sx={{ py: 8, position: "relative", zIndex: 2 }}>
-      <Container className="plans-container" sx={{ flexDirection: isMobile ? "column" : "row", }}>
-        <Box sx={{position: isMobile ? "static" : "sticky", top:"80px",height: isMobile ? "unset" : "250px" }}>
-          <SectionTitle title="המסע שלנו ביחד:" className="plans-title" variant={isMiniMobile ? "h3" : "h2"}/>
+      <Container
+        className="plans-container"
+        sx={{ flexDirection: isMobile ? "column" : "row" }}
+      >
+        <Box
+          sx={{
+            position: isMobile ? "static" : "sticky",
+            top: "80px",
+            height: isMobile ? "unset" : "250px",
+          }}
+        >
+          <SectionTitle
+            title="המסע שלנו ביחד:"
+            className="plans-title"
+            variant={isMiniMobile ? "h3" : "h2"}
+          />
           <Typography variant={isMiniMobile ? "h6" : "h5"} color="#424242">
             לאחר פגישת היכרות, בה אבין את הצרכים והרצונות שלכם, נבחר יחד קונספט
             עיצובי. במהלך התהליך, אני אציג בפניכם את השלבים השונים בכדי להבטיח
@@ -116,8 +129,8 @@ export default function Plans() {
                     alignItems: "flex-start",
                   }}
                 >
-                  {item.desc.map((part) => (
-                    <Typography textAlign={"right"} variant="body1">
+                  {item.desc.map((part, i) => (
+                    <Typography key={i} textAlign={"right"} variant="body1">
                       {part}
                     </Typography>
                   ))}

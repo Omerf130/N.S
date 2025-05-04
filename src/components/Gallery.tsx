@@ -1,6 +1,7 @@
 import { useRef, useEffect, useState } from "react";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/splide/dist/css/splide.min.css";
+import { Box } from "@mui/material";
 
 const galleryItems = [
   { id: 1, src: "/pics/gallery/gallery1.jpeg", alt: "image1" },
@@ -38,61 +39,69 @@ const Gallery = () => {
   }, [splideInstances]);
 
   return (
-    <div>
-      {/* Main Carousel */}
-      <div style={{marginBottom:"10px"}}>
+    <Box id="gallery">
+      <div>
+        {/* Main Carousel */}
+        <div style={{ marginBottom: "10px" }}>
+          <Splide
+            ref={mainRef}
+            options={{
+              type: "fade",
+              heightRatio: 0.5,
+              width: "1000px",
+              pagination: false,
+              arrows: false,
+              cover: true,
+            }}
+            onMounted={(splide: any) => {
+              // Save the main Splide instance
+              setSplideInstances((prevState) => ({
+                ...prevState,
+                main: splide,
+              }));
+            }}
+          >
+            {galleryItems.map((item) => (
+              <SplideSlide key={item.id}>
+                <img src={item.src} alt={item.alt} />
+              </SplideSlide>
+            ))}
+          </Splide>
+        </div>
+        {/* Thumbnails Carousel */}
         <Splide
-          ref={mainRef}
+          ref={thumbsRef}
           options={{
-            type: "fade",
-            heightRatio: 0.5,
-            width: "1000px",
+            fixedWidth: 200,
+            fixedHeight: 114,
+            isNavigation: true, // tells splide that thumbs control another splide
+            gap: 10,
+            focus: "center",
             pagination: false,
-            arrows: false,
             cover: true,
+            breakpoints: {
+              600: {
+                fixedWidth: 66,
+                fixedHeight: 40,
+              },
+            },
           }}
           onMounted={(splide: any) => {
-            // Save the main Splide instance
-            setSplideInstances((prevState) => ({ ...prevState, main: splide }));
+            // Save the thumbs Splide instance
+            setSplideInstances((prevState) => ({
+              ...prevState,
+              thumbs: splide,
+            }));
           }}
         >
           {galleryItems.map((item) => (
             <SplideSlide key={item.id}>
-              <img src={item.src} alt={item.alt} />
+              <img src={item.src} alt={`Thumbnail ${item.id}`} />
             </SplideSlide>
           ))}
         </Splide>
       </div>
-      {/* Thumbnails Carousel */}
-      <Splide
-        ref={thumbsRef}
-        options={{
-          fixedWidth: 200,
-          fixedHeight: 114,
-          isNavigation: true, // tells splide that thumbs control another splide
-          gap: 10,
-          focus: "center",
-          pagination: false,
-          cover: true,
-          breakpoints: {
-            600: {
-              fixedWidth: 66,
-              fixedHeight: 40,
-            },
-          },
-        }}
-        onMounted={(splide: any) => {
-          // Save the thumbs Splide instance
-          setSplideInstances((prevState) => ({ ...prevState, thumbs: splide }));
-        }}
-      >
-        {galleryItems.map((item) => (
-          <SplideSlide key={item.id}>
-            <img src={item.src} alt={`Thumbnail ${item.id}`} />
-          </SplideSlide>
-        ))}
-      </Splide>
-    </div>
+    </Box>
   );
 };
 

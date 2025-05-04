@@ -1,14 +1,15 @@
 import { Box, Typography } from "@mui/material";
 
 export default function Hero() {
+  const heroTitle = "Nazi Sharon";
+
   return (
     <Box
       id="hero"
       sx={{
         position: "relative",
         height: "100vh",
-        backgroundImage:
-          'url("/pics/gallery/gallery6.jpeg")',
+        backgroundImage: 'url("/pics/gallery/gallery6.jpeg")',
         backgroundSize: "cover",
         backgroundPosition: "center",
         display: "flex",
@@ -32,12 +33,35 @@ export default function Hero() {
       />
 
       <Box sx={{ position: "relative", zIndex: 2 }}>
-        <Typography variant="h1" component="h1">
-          Nazi Sharon
+        <Typography
+          variant="h1"
+          component="h1"
+          sx={{
+            fontSize: { xs: "3rem", sm: "4rem", md: "5rem", lg: "6rem" },
+            display: "flex",
+            flexWrap: "wrap",
+            justifyContent: "center",
+          }}
+        >
+          {heroTitle.split("").map((char, i) => (
+            <span
+              className="character"
+              key={i}
+              style={{ animationDelay: `${(i + 1) * 0.25}s` }}
+            >
+              {char === " " ? "\u00A0" : char}
+            </span>
+          ))}
         </Typography>
 
-        <Typography variant="h3" sx={{ mt: 2 }}>
-           מהדמיון... למציאות...💫
+        <Typography variant="h3" sx={{
+            fontSize: { xs: "2rem", sm: "3rem", md: "4rem", lg: "5rem" },
+            display: "flex",
+            flexWrap: "wrap",
+            justifyContent: "center",
+            mt: 2 
+          }}>
+          מהדמיון... למציאות...💫
         </Typography>
         <Typography variant="h5" sx={{ mt: 2 }}>
           פתרונות יצירתיים, תוצאות יצירתיות

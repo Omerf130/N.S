@@ -11,18 +11,25 @@ const services = [
 
 const Services = () => {
   return (
-    <Container className="services">
-      <SectionTitle title="שירותים" className="services-title" variant="h2"/>
-      <Paper className="services-list" sx={{backgroundColor:"transparent", border:"none", boxShadow:"unset"}}>
-        {services.map((service) => (
-          <Box
-            key={service.id}
-          >
-            <Typography variant="h6">{service.text}</Typography>
-          </Box>
-        ))}
-      </Paper>
-    </Container>
+    <Box id="services">
+      <Container className="services">
+        <SectionTitle title="שירותים" className="services-title" variant="h2" />
+        <Paper
+          className="services-list"
+          sx={{
+            backgroundColor: "transparent",
+            border: "none",
+            boxShadow: "unset",
+          }}
+        >
+          {services.map((service) => (
+            <Box key={service.id}>
+              <Typography variant="h6">{service.text}</Typography>
+            </Box>
+          ))}
+        </Paper>
+      </Container>
+    </Box>
   );
 };
 
