@@ -23,7 +23,8 @@ const Services = () => {
           }}
         >
           {services.map((service) => (
-            <Box key={service.id}>
+            <Box>
+              <Box key={service.id}></Box>
               <Typography variant="h6">{service.text}</Typography>
             </Box>
           ))}

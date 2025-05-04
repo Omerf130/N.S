@@ -39,7 +39,7 @@ const Gallery = () => {
   }, [splideInstances]);
 
   return (
-    <Box id="gallery">
+    <Box id="gallery" >
       <div>
         {/* Main Carousel */}
         <div style={{ marginBottom: "10px" }}>
@@ -48,7 +48,7 @@ const Gallery = () => {
             options={{
               type: "fade",
               heightRatio: 0.5,
-              width: "1000px",
+              width: "100%",
               pagination: false,
               arrows: false,
               cover: true,
@@ -81,8 +81,8 @@ const Gallery = () => {
             cover: true,
             breakpoints: {
               600: {
-                fixedWidth: 66,
-                fixedHeight: 40,
+                fixedWidth: 76,
+                fixedHeight: 45,
               },
             },
           }}
