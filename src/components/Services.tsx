@@ -2,11 +2,12 @@ import { Box, Container, Paper, Typography } from "@mui/material";
 import SectionTitle from "../common/SectionTitle";
 
 const services = [
-  { id: 1, text: "תכנון ועיצוב פנים" },
-  { id: 2, text: "הדמיות תלת מימד" },
-  { id: 3, text: "בחירת חומרים וריהוט" },
-  { id: 4, text: "התמחות בעיצוב מטבחים" },
-  { id: 5, text: "ליווי אישי לאורך כל התהליך" },
+  { id: 1, text: "תכנון פנים למגורים" },
+  { id: 2, text: "עיצוב משרדים" },
+  { id: 3, text: "ייעוץ עיצובי" },
+  { id: 4, text: "עיצוב חללים ציבוריים" },
+  { id: 5, text: "תכנון תאורה" },
+  { id: 6, text: "בחירת צבעים וחומרים" },
 ];
 
 const Services = () => {
