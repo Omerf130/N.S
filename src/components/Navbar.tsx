@@ -14,9 +14,9 @@ import { DICT } from "../consts";
 const sections = [
   { label: DICT.about, id: "about" },
   { label: DICT.plans, id: "plans" },
-  { label: DICT.contact, id: "contact" },
   { label: DICT.services, id: "services" },
   { label: DICT.gallery, id: "gallery" },
+  { label: DICT.contact, id: "contact" },
 ];
 
 function Navbar() {

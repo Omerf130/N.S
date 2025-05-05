@@ -69,7 +69,7 @@ export default function Plans() {
           }}
         >
           <SectionTitle
-            title="המסע שלנו ביחד:"
+            title="המסע שלנו ביחד..."
             className="plans-title"
             variant={isMiniMobile ? "h3" : "h2"}
           />

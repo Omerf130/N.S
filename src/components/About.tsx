@@ -47,7 +47,7 @@ export default function About() {
           }}
         />
         <Container sx={{ maxWidth: "sm", padding:"0"}}>
-          <SectionTitle title="נעים מאוד" className="about-title" variant={isMobile ? "h3" : "h2"}/>
+          <SectionTitle title="נעים מאוד," className="about-title" variant={isMobile ? "h3" : "h2"}/>
           <Typography variant={isMobile ? "h6" : "h5"} color="#424242">
             אני נזי שרון, מעצבת פנים עם תשוקה אמיתית לאומנות עיצוב החללים, ובפרט
             בעיצוב מטבחים. עם ראש פתוח וייחודי, אני מאמינה כי כל אתגר הוא
@@ -58,7 +58,7 @@ export default function About() {
             ולרצונות של לקוחותיי כדי לשלב אותם עם החזון שלי. כך אני יוצרת מרחבים
             שמשקפים את האישיות והסגנון של כל לקוח. עיצוב המטבח הוא תחום שמיוחד
             לי, ואני מתמחה ביצירת חללים פונקציונליים ויפהפיים, המשלבים בין נוחות
-            לאסתטיקה. ובסופו של דבר, בואו יחד נהפוך מדמיון… למציאות.
+            לאסתטיקה. ובסופו של דבר, בואו יחד נהפוך מדמיון… למציאות. 💫
           </Typography>
         </Container>
       </Container>
