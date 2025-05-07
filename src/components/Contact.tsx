@@ -50,7 +50,7 @@ const Contact = () => {
           mt: 5,
           direction: "rtl",
           position: "relative",
-          backgroundColor: "rgb(146, 159, 167)",
+          backgroundColor: "#181c14",
           borderRadius: "10px",
           boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)",
         }}
