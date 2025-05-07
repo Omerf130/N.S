@@ -93,7 +93,7 @@ const Contact = () => {
             >
               <EditLocationIcon sx={{ color: "#fff" }} />
               <Typography sx={{ color: "#fff" }}>
-                מיקום: תל אביב, ישראל
+                מיקום: אשדוד, ישראל
               </Typography>
             </Box>
 
