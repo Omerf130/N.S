@@ -47,7 +47,8 @@ export default function Plans() {
 
   return (
     <Box id="plans" sx={{ py: 8, position:"relative" }}>
-      {/* <Container
+      {isMobile ? 
+       <Container
         className="plans-container"
         sx={{ flexDirection: isMobile ? "column" : "row" }}
       >
@@ -96,7 +97,7 @@ export default function Plans() {
                 sx={{
                   padding: isMobile ? 2 : 4,
                   borderRadius: 3,
-                  height: `clamp(430px, 25vw, 500px)`,
+                  height: `clamp(330px, 25vw, 400px)`,
                   width: `${isMobile ? "95%" : "450px"}`,
                   overflow: "hidden",
                   textAlign: "center",
@@ -106,6 +107,8 @@ export default function Plans() {
                   },
                 }}
               >
+                {item.icon}
+
                 <Typography variant="h5" gutterBottom>
                   {item.title}
                 </Typography>
@@ -121,12 +124,16 @@ export default function Plans() {
                       {part}
                     </Typography>
                   ))}
+
                 </Box>
+
               </Paper>
             </Box>
           ))}
         </Box>
-      </Container> */}
+      </Container>
+      :
+      
       <Container
         className="plans-container"
         sx={{ flexDirection: "column"  }}
@@ -204,6 +211,8 @@ export default function Plans() {
             אני כאן כדי ללוות אותך צעד צעד, להפוך רעיונות למציאות - ושהכל ירגיש בדיוק אתה.
           </Typography>
       </Container>
+      }
+      
     </Box>
   );
 }
