@@ -17,6 +17,7 @@ const SectionTitle = ({ title,variant, className = "" }: SectionTitleProps) => {
   return (
     <Typography
       variant={variant}
+      sx={{textAlign:"center"}}
       ref={ref}
       className={`section-title ${className} ${inView ? "fade-in" : ""}`}
     >
