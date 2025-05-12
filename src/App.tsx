@@ -10,6 +10,8 @@ import { useMediaMatch } from "./hooks/useMediaMatch";
 import Services from "./components/Services";
 import Gallery from "./components/Gallery";
 import Rec from "./components/Rec";
+import Me from "./components/Me";
+import Spacial from "./components/Spacial";
 
 function App() {
   const isMobile = useMediaMatch("(max-width: 768px)");
@@ -46,6 +48,8 @@ function App() {
       <Box component="main">
         <Hero />
         <About />
+        <Me/>
+        <Spacial/>
         <Plans />
         <Services />
         <Rec />

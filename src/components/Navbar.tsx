@@ -9,9 +9,10 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
-import WhatsAppIcon from "@mui/icons-material/WhatsApp";
-import EmailIcon from "@mui/icons-material/Email";
 import { DICT } from "../consts";
+import { FaTiktok } from "react-icons/fa";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import InstagramIcon from "@mui/icons-material/Instagram";
 
 const sections = [
   { label: DICT.about, id: "about" },
@@ -22,7 +23,9 @@ const sections = [
 ];
 
 function Navbar() {
-  const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
+  const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
+    null
+  );
 
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorElNav(event.currentTarget);
@@ -41,23 +44,44 @@ function Navbar() {
       <Container maxWidth="xl">
         <Toolbar
           disableGutters
-          sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexDirection:"row-reverse" }}
+          sx={{
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+            flexDirection: "row-reverse",
+          }}
         >
           {/* Left Side: Social Icons */}
           <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
             <IconButton
               color="inherit"
-              onClick={() => openLink(`https://wa.me/+972545866554`)}
+              onClick={() =>
+                openLink(
+                  `"https://www.instagram.com/nazi_sharon_designer/?igsh=aHgyZTBoeDg2eHQx&utm_source=qr#"`
+                )
+              }
             >
-              <WhatsAppIcon sx={{ color: "#000", fontSize: "26px" }} />
+              <InstagramIcon sx={{ color: "#000", fontSize: "26px" }} />
             </IconButton>
             <IconButton
               color="inherit"
-              onClick={() => {
-                window.location.href = "mailto:Nazisharon@icloud.com";
-              }}
+              onClick={() =>
+                openLink(
+                  "https://www.tiktok.com/@nazisharon9?_t=ZS-8vuhcnubIZE&_r=1"
+                )
+              }
             >
-              <EmailIcon sx={{ color: "#000", fontSize: "26px" }} />
+              <FaTiktok size={26} color="#000" />
+            </IconButton>
+            <IconButton
+              color="inherit"
+              onClick={() =>
+                openLink(
+                  `"https://www.facebook.com/nazzisharoninteriordesigner?mibextid=wwXIfr&rdid=9Ys8vEyx2VxdjAHf&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1QbreJaXbc%2F%3Fmibextid%3DwwXIfr#"`
+                )
+              }
+            >
+              <FacebookIcon sx={{ color: "#000", fontSize: "26px" }} />
             </IconButton>
           </Box>
 

@@ -1,16 +1,16 @@
 import { Box, Container, Paper, Typography } from "@mui/material";
 import SectionTitle from "../common/SectionTitle";
+import { useMediaMatch } from "../hooks/useMediaMatch";
 
 const services = [
-  { id: 1, text: "תכנון פנים למגורים" },
-  { id: 2, text: "עיצוב משרדים" },
-  { id: 3, text: "ייעוץ עיצובי" },
-  { id: 4, text: "עיצוב חללים ציבוריים" },
-  { id: 5, text: "תכנון תאורה" },
-  { id: 6, text: "בחירת צבעים וחומרים" },
+  { id: 1, text: "🪄 - תכנון ועיצוב מטבחים בהתאמה אישית" },
+  { id: 2, text: "🪄 - עיצוב חללים פרטיים וציבוריים" },
+  { id: 3, text: "🪄 - ליווי מלא משלב הרעיון ועד לביצוע" },
+  { id: 4, text: "🪄 - ייעוץ למתכננים בעצמם" },
 ];
 
 const Services = () => {
+    const isMobile = useMediaMatch("(max-width: 500px)");
   return (
     <Box id="services">
       <Container className="services">
@@ -26,7 +26,7 @@ const Services = () => {
           {services.map((service) => (
             <Box>
               <Box key={service.id}></Box>
-              <Typography variant="h6">{service.text}</Typography>
+              <Typography variant={isMobile ? "h6" : "h5"}>{service.text}</Typography>
             </Box>
           ))}
         </Paper>

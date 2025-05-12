@@ -64,6 +64,74 @@ const Contact = () => {
             maxHeight: isMobile ? "unset" : "500px",
           }}
         >
+          {/* Contact Form Section */}
+          <Box
+            component="form"
+            noValidate
+            autoComplete="off"
+            sx={{
+              flex: 1,
+              display: "flex",
+              flexDirection: "column",
+              gap: 2,
+              paddingLeft: 2,
+              borderLeft: isMobile ? "none" : "2px solid #ccc",
+              backgroundColor: "#f4f4f4",
+              padding: "10px",
+              height: "550px",
+              marginTop: "-30px",
+              boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)",
+              borderRadius: "10px",
+              border: "none",
+            }}
+          >
+            <SectionTitle
+              title="השאירו פרטים ונדבר"
+              className="contact-title"
+              variant="h2"
+            />
+            <TextField
+              label="שם" // "Name" in Hebrew
+              placeholder="הכנס את שמך"
+              variant="outlined"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              fullWidth
+              InputLabelProps={{ style: { textAlign: "right" } }}
+              inputProps={{ style: { textAlign: "right" } }}
+            />
+            <TextField
+              label="אימייל" // "Email" in Hebrew
+              placeholder="הכנס את האימייל שלך"
+              variant="outlined"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              fullWidth
+              InputLabelProps={{ style: { textAlign: "right" } }}
+              inputProps={{ style: { textAlign: "right" } }}
+            />
+            <TextField
+              label="תוכן ההודעה" // "Message Content" in Hebrew
+              placeholder="הכנס את תוכן ההודעה שלך"
+              variant="outlined"
+              multiline
+              rows={4}
+              value={content}
+              onChange={(e) => setContent(e.target.value)}
+              fullWidth
+              InputLabelProps={{ style: { textAlign: "right" } }}
+              inputProps={{ style: { textAlign: "right" } }}
+            />
+            <Button
+              variant="contained"
+              color="success"
+              onClick={handleSubmit}
+              disabled={!isFormValid}
+              fullWidth
+            >
+              שלח בוואטסאפ
+            </Button>
+          </Box>
           {/* My Details Section */}
           <Box
             sx={{ flex: 1, display: "flex", flexDirection: "column", gap: 2 }}
@@ -137,79 +205,8 @@ const Contact = () => {
               </IconButton>
             </Box>
 
-            {/* <Typography sx={{ color: "#fff" }}>
-            הצהרת נגישות: האתר תואם להנגישות ברמה A ואנו עובדים לשיפור תמידי
-            </Typography> */}
           </Box>
 
-          {/* Contact Form Section */}
-          <Box
-            component="form"
-            noValidate
-            autoComplete="off"
-            sx={{
-              flex: 1,
-              display: "flex",
-              flexDirection: "column",
-              gap: 2,
-              paddingLeft: 2,
-              borderLeft: isMobile ? "none" : "2px solid #ccc",
-              backgroundColor: "#f4f4f4",
-              padding: "10px",
-              height: "550px",
-              marginTop: "-30px",
-              boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)",
-              borderRadius: "10px",
-              border: "none",
-            }}
-          >
-            <SectionTitle
-              title="השאירו פרטים ונדבר"
-              className="contact-title"
-              variant="h2"
-            />
-            <TextField
-              label="שם" // "Name" in Hebrew
-              placeholder="הכנס את שמך"
-              variant="outlined"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              fullWidth
-              InputLabelProps={{ style: { textAlign: "right" } }}
-              inputProps={{ style: { textAlign: "right" } }}
-            />
-            <TextField
-              label="אימייל" // "Email" in Hebrew
-              placeholder="הכנס את האימייל שלך"
-              variant="outlined"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              fullWidth
-              InputLabelProps={{ style: { textAlign: "right" } }}
-              inputProps={{ style: { textAlign: "right" } }}
-            />
-            <TextField
-              label="תוכן ההודעה" // "Message Content" in Hebrew
-              placeholder="הכנס את תוכן ההודעה שלך"
-              variant="outlined"
-              multiline
-              rows={4}
-              value={content}
-              onChange={(e) => setContent(e.target.value)}
-              fullWidth
-              InputLabelProps={{ style: { textAlign: "right" } }}
-              inputProps={{ style: { textAlign: "right" } }}
-            />
-            <Button
-              variant="contained"
-              color="success"
-              onClick={handleSubmit}
-              disabled={!isFormValid}
-              fullWidth
-            >
-              שלח בוואטסאפ
-            </Button>
-          </Box>
         </Box>
       </Container>
     </Box>
