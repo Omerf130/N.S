@@ -47,7 +47,7 @@ export default function About() {
           }}
         />
         <Container sx={{ maxWidth: "sm", padding: "0", display:"flex", flexDirection:"column", gap:"30px" }}>
-          <Typography variant={isMobile ? "h6" : "h5"} color="#424242">
+          <Typography variant={isMobile ? "h6" : "h5"} color="#3c4d37">
             כמו סמל היין ויאנג - אני מאמינה שעיצוב טוב הוא שילוב הרמוני של
             ניגודים.
           </Typography>
@@ -56,13 +56,13 @@ export default function About() {
             className="about-title"
             variant={isMobile ? "h3" : "h2"}
           />
-          <Typography variant={isMobile ? "h6" : "h5"} color="#424242">
+          <Typography variant={isMobile ? "h6" : "h5"} color="#3c4d37">
             אני נזי שרון, מעצבת פנים עם התמחות בעיצוב מטבחים. בגישה פתוחה
             וייחודית, אני רואה בכל אתגר הזדמנות לחדש, להעז וליצור משהו שמעורר
             רגש. אני חותרת לפרוץ גבולות ולשבור תפיסות שגרתיות בתחום העיצוב, כדי
             לממש את החלומות של לקוחותיי דרך פתרונות אישיים ומדויקים.
           </Typography>
-          <Typography variant={isMobile ? "h6" : "h5"} color="#424242">
+          <Typography variant={isMobile ? "h6" : "h5"} color="#3c4d37">
             בין פונקציונליות לאסתטיקה, בין חלום למציאות - אני יוצרת חללים
             שמשקפים את האישיות והמהות שלכם.
           </Typography>

@@ -2,6 +2,7 @@ import { useRef, useEffect, useState } from "react";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/splide/dist/css/splide.min.css";
 import { Box } from "@mui/material";
+import SectionTitle from "../common/SectionTitle";
 
 const galleryItems = [
   { id: 1, src: "/pics/gallery/gallery1.jpeg", alt: "image1" },
@@ -40,7 +41,12 @@ const Gallery = () => {
 
   return (
     <Box id="gallery" >
-      <div>
+      <div >
+      <SectionTitle
+          title="מהדמיון... למציאות"
+          className="gallery-title"
+          variant="h2"
+        />
         {/* Main Carousel */}
         <div style={{ marginBottom: "10px" }}>
           <Splide

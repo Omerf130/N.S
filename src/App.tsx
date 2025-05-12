@@ -50,8 +50,8 @@ function App() {
         <About />
         <Me/>
         <Spacial/>
-        <Plans />
         <Services />
+        <Plans />
         <Rec />
         <Gallery />
         <Contact />

@@ -16,13 +16,14 @@ const Footer: React.FC = () => {
       component="footer"
       sx={{
         position: "relative",
-        mt: 5,
+        mt: 0,
         py: 3,
         px: 2,
         textAlign: "center",
         backgroundColor: "#fff",
         color: "#9e9e9e",
         boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)",
+        borderTop:"1px solid #000"
       }}
     >
       <Box sx={{ mb: 2 }}>

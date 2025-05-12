@@ -42,7 +42,7 @@ const Contact = () => {
   const isFormValid = name.trim() && email.trim() && content.trim();
 
   return (
-    <Box id="contact">
+    <Box id="contact" sx={{position:"relative", display:"flex", justifyContent:"center",backgroundColor:"#fff"}}>
       <Container
         className="contact"
         maxWidth="lg"
@@ -50,22 +50,17 @@ const Contact = () => {
           mt: 5,
           direction: "rtl",
           position: "relative",
-          backgroundColor: "#181c14",
           borderRadius: "10px",
-          boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)",
+          color:"#000",
+          maxWidth:"700px !important",
+          display:"flex",
+          flexDirection:"column",
+          alignItems:"center",
+          gap:"15px"
         }}
       >
+        {/* Contact Form Section */}
         <Box
-          sx={{
-            display: "flex",
-            flexDirection: isMobile ? "column-reverse" : "row",
-            justifyContent: "space-between",
-            gap: 4,
-            maxHeight: isMobile ? "unset" : "500px",
-          }}
-        >
-          {/* Contact Form Section */}
-          <Box
             component="form"
             noValidate
             autoComplete="off"
@@ -76,20 +71,18 @@ const Contact = () => {
               gap: 2,
               paddingLeft: 2,
               borderLeft: isMobile ? "none" : "2px solid #ccc",
-              backgroundColor: "#f4f4f4",
               padding: "10px",
-              height: "550px",
               marginTop: "-30px",
-              boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)",
               borderRadius: "10px",
               border: "none",
             }}
           >
             <SectionTitle
-              title="השאירו פרטים ונדבר"
+              title="צור קשר"
               className="contact-title"
               variant="h2"
             />
+            <Box sx={{display:"flex", gap:"10px"}}>
             <TextField
               label="שם" // "Name" in Hebrew
               placeholder="הכנס את שמך"
@@ -110,6 +103,7 @@ const Contact = () => {
               InputLabelProps={{ style: { textAlign: "right" } }}
               inputProps={{ style: { textAlign: "right" } }}
             />
+            </Box>
             <TextField
               label="תוכן ההודעה" // "Message Content" in Hebrew
               placeholder="הכנס את תוכן ההודעה שלך"
@@ -132,22 +126,73 @@ const Contact = () => {
               שלח בוואטסאפ
             </Button>
           </Box>
+          <Box>
+              {/* Social Media Icons */}
+              <Box sx={{ display: "flex" }}>
+              <IconButton
+                color="inherit"
+                onClick={() =>
+                  openLink(
+                    "https://www.instagram.com/nazi_sharon_designer/?igsh=aHgyZTBoeDg2eHQx&utm_source=qr#"
+                  )
+                }
+              >
+                <InstagramIcon sx={{ fontSize: "26px" }} />
+              </IconButton>
+              <IconButton
+                color="inherit"
+                onClick={() =>
+                  openLink(
+                    "https://www.facebook.com/nazzisharoninteriordesigner?mibextid=wwXIfr&rdid=9Ys8vEyx2VxdjAHf&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1QbreJaXbc%2F%3Fmibextid%3DwwXIfr#"
+                  )
+                }
+              >
+                <FacebookIcon sx={{  fontSize: "26px" }} />
+              </IconButton>
+              <IconButton
+                color="inherit"
+                onClick={() =>
+                  openLink(
+                    "https://www.tiktok.com/@nazisharon9?_t=ZS-8vuhcnubIZE&_r=1"
+                  )
+                }
+              >
+                <FaTiktok size={26} />
+              </IconButton>
+              <IconButton
+                color="inherit"
+                onClick={() => openLink(`https://wa.me/+972545866554`)}
+              >
+                <WhatsAppIcon sx={{fontSize: "26px" }} />
+              </IconButton>
+            </Box>
+          </Box>
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: isMobile ? "column-reverse" : "row",
+            justifyContent: "space-between",
+            gap: 4,
+            maxHeight: isMobile ? "unset" : "500px",
+          }}
+        >
+          
           {/* My Details Section */}
           <Box
             sx={{ flex: 1, display: "flex", flexDirection: "column", gap: 2 }}
           >
-            <Typography variant="h4" sx={{ color: "#fff" }}>
-              הפרטים שלי
+            <Typography variant="h4" sx={{textAlign:"center"}}>
+              Nazi Sharon
             </Typography>
             <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
-              <LocalPhoneIcon sx={{ color: "#fff" }} />
-              <Typography sx={{ color: "#fff" }}>
+              <LocalPhoneIcon  />
+              <Typography >
                 טלפון: +972545866554
               </Typography>
             </Box>
             <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
-              <MailOutlineIcon sx={{ color: "#fff" }} />
-              <Typography sx={{ color: "#fff" }}>
+              <MailOutlineIcon  />
+              <Typography >
                 אימייל: Nazisharon@icloud.com
               </Typography>
             </Box>
@@ -159,51 +204,13 @@ const Contact = () => {
                 marginBottom: 2,
               }}
             >
-              <EditLocationIcon sx={{ color: "#fff" }} />
-              <Typography sx={{ color: "#fff" }}>
+              <EditLocationIcon  />
+              <Typography >
                 מיקום: אשדוד, ישראל
               </Typography>
             </Box>
 
-            {/* Social Media Icons */}
-            <Box sx={{ display: "flex" }}>
-              <IconButton
-                color="inherit"
-                onClick={() =>
-                  openLink(
-                    "https://www.instagram.com/nazi_sharon_designer/?igsh=aHgyZTBoeDg2eHQx&utm_source=qr#"
-                  )
-                }
-              >
-                <InstagramIcon sx={{ color: "#fff", fontSize: "26px" }} />
-              </IconButton>
-              <IconButton
-                color="inherit"
-                onClick={() =>
-                  openLink(
-                    "https://www.facebook.com/nazzisharoninteriordesigner?mibextid=wwXIfr&rdid=9Ys8vEyx2VxdjAHf&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1QbreJaXbc%2F%3Fmibextid%3DwwXIfr#"
-                  )
-                }
-              >
-                <FacebookIcon sx={{ color: "#fff", fontSize: "26px" }} />
-              </IconButton>
-              <IconButton
-                color="inherit"
-                onClick={() =>
-                  openLink(
-                    "https://www.tiktok.com/@nazisharon9?_t=ZS-8vuhcnubIZE&_r=1"
-                  )
-                }
-              >
-                <FaTiktok size={26} color="#fff" />
-              </IconButton>
-              <IconButton
-                color="inherit"
-                onClick={() => openLink(`https://wa.me/+972545866554`)}
-              >
-                <WhatsAppIcon sx={{ color: "#fff", fontSize: "26px" }} />
-              </IconButton>
-            </Box>
+          
 
           </Box>
 

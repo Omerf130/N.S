@@ -4,40 +4,40 @@ import SectionTitle from "../common/SectionTitle";
 import { IoChatbubbleOutline } from "react-icons/io5";
 import ConstructionIcon from '@mui/icons-material/Construction';
 import ColorLensIcon from '@mui/icons-material/ColorLens';
-import { TbMessages } from "react-icons/tb";
+import { FaRegHandshake } from "react-icons/fa";
 
 const data = [
   {
-    title: "קבלת לוח השראה",
+    title: "היכרות מעמיקה",
     desc: [
-      "היכרות מעמיקה, שיחה ראשונית להקשבה, חיבור והבנת הצרכים"
+      "שיחה ראשונית להקשבה, חיבור והבנת הצרכים"
     ],
     id: "1",
     icon: <IoChatbubbleOutline fontSize={60}/>
   },
   {
-    title: "הדמיה עבור החלל הנבחר",
+    title: "קונספט בהתאמה אישית",
     desc: [
-      "קונספט בהתאמה אישית. גיבוש רעיון עיצובי ייחודי שמבוסס עליך."
+      "גיבוש רעיון עיצובי ייחודי שמבוסס עליך."
     ],
     id: "2",
-    icon: <ConstructionIcon sx={{fontSize:"60px"}}/>
-  },
-  {
-    title: "חוברת תוכניות (הרלוונטית לפרויקט)",
-    desc: [
-      "פתרונות עיצוביים חכמים, תכנון מדוייק שמשלב בין פונקציונליות לאסתטיקה."
-    ],
-    id: "3",
     icon: <ColorLensIcon  sx={{fontSize:"60px"}}/>
   },
   {
-    title: "ייעוץ וליווי במהלך הביצוע",
+    title: "פתרונות עיצוביים חכמים",
     desc: [
-      "ליווי עד הסוף. ליווי צמוד בכל שלב עד להגשמה מלאה של הפרויקט"
+      "תכנון מדוייק שמשלב בין פונקציונליות לאסתטיקה."
+    ],
+    id: "3",
+    icon: <ConstructionIcon sx={{fontSize:"60px"}}/>
+  },
+  {
+    title: "ליווי עד הסוף",
+    desc: [
+      "ליווי צמוד בכל שלב עד להגשמה מלאה של הפרויקט"
     ],
     id: "4",
-    icon: <TbMessages fontSize={60}/>
+    icon: <FaRegHandshake fontSize={60}/>
   },
 ];
 
@@ -134,13 +134,10 @@ export default function Plans() {
         <Box
         >
           <SectionTitle
-            title="המסע שלנו ביחד..."
+            title="המסע שלנו..."
             className="plans-title"
             variant={isMiniMobile ? "h3" : "h2"}
           />
-          <Typography variant={isMiniMobile ? "h6" : "h5"} color="#424242">
-            אני כאן כדי ללוות אותך צעד צעד, להפוך רעיונות למציאות - ושהכל ירגיש בדיוק אתה.
-          </Typography>
         </Box>
         <Box
           sx={{
@@ -203,6 +200,9 @@ export default function Plans() {
             </Box>
           ))}
         </Box>
+        <Typography variant={isMiniMobile ? "h6" : "h5"} color="#3c4d37">
+            אני כאן כדי ללוות אותך צעד צעד, להפוך רעיונות למציאות - ושהכל ירגיש בדיוק אתה.
+          </Typography>
       </Container>
     </Box>
   );
