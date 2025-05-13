@@ -57,7 +57,7 @@ function Navbar() {
               color="inherit"
               onClick={() =>
                 openLink(
-                  `"https://www.instagram.com/nazi_sharon_designer/?igsh=aHgyZTBoeDg2eHQx&utm_source=qr#"`
+                  "https://www.instagram.com/nazi_sharon_designer/?igsh=aHgyZTBoeDg2eHQx&utm_source=qr#"
                 )
               }
             >
@@ -77,7 +77,7 @@ function Navbar() {
               color="inherit"
               onClick={() =>
                 openLink(
-                  `"https://www.facebook.com/nazzisharoninteriordesigner?mibextid=wwXIfr&rdid=9Ys8vEyx2VxdjAHf&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1QbreJaXbc%2F%3Fmibextid%3DwwXIfr#"`
+                  "https://www.facebook.com/nazzisharoninteriordesigner?mibextid=wwXIfr&rdid=9Ys8vEyx2VxdjAHf&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1QbreJaXbc%2F%3Fmibextid%3DwwXIfr#"
                 )
               }
             >
