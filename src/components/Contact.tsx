@@ -83,7 +83,7 @@ const Contact = () => {
               variant="h2"
             />
             <SectionTitle
-            title="זה הזמן להגשים את החלום העיצובי שלך. אני כאן בשבילך"
+            title="זה הזמן להגשים את החלום העיצובי שלך, אני כאן בשבילך"
             className="contact-title"
             variant="h5"
             />
