@@ -5,7 +5,7 @@
   h1,
   h2
   {
-    color: $headlinetry !important;
+    color: $greentry !important;
   }
   h5,h6,p {
     color: $try;
@@ -59,6 +59,13 @@
     .plans-container {
       display: flex;
       gap: 40px;
+      .slot {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      .push-up {
+        animation: pushUp 0.25s forwards;
+      }
     }
     h3 {
       animation: slideUpFadeIn 1s ease-out forwards;
@@ -68,7 +75,7 @@
     }
   }
   #gallery {
-    margin: 70px 0 0 0;
+    margin: 70px 50px 0 50px;
     .gallery-title {
       direction: rtl;
       padding: 15px 30px;
@@ -135,5 +142,13 @@
   &.fade-in {
     opacity: 1;
     transform: translateY(0); /* החזר את הכותרת למקומה המקורי */
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .app {
+    #gallery {
+      margin: 70px 20px 0 20px;
+    }
   }
 }

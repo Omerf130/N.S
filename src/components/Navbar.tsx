@@ -16,8 +16,8 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 
 const sections = [
   { label: DICT.about, id: "about" },
-  { label: DICT.plans, id: "plans" },
   { label: DICT.services, id: "services" },
+  { label: DICT.plans, id: "plans" },
   { label: DICT.gallery, id: "gallery" },
   { label: DICT.contact, id: "contact" },
 ];
