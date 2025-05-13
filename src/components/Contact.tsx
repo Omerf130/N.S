@@ -78,9 +78,14 @@ const Contact = () => {
             }}
           >
             <SectionTitle
-              title="צור קשר"
+              title="בואו נהפוך דמיון למציאות"
               className="contact-title"
               variant="h2"
+            />
+            <SectionTitle
+            title="זה הזמן להגשים את החלום העיצובי שלך. אני כאן בשבילך"
+            className="contact-title"
+            variant="h5"
             />
             <Box sx={{display:"flex", gap:"10px"}}>
             <TextField

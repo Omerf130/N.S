@@ -55,7 +55,15 @@
       }
     }
   }
+  #about {
+    .about-title {
+      color: $greentry;
+    }
+  }
   #plans {
+    .plans-title {
+      color: $greentry;
+    }
     .plans-container {
       display: flex;
       gap: 40px;
