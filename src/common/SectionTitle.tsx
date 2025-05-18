@@ -14,6 +14,8 @@ const SectionTitle = ({ title,variant, className = "" }: SectionTitleProps) => {
     triggerOnce: true,
   });
 
+  console.log(inView)
+
   return (
     <Typography
       variant={variant}

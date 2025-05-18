@@ -42,8 +42,6 @@ export default function Plans() {
     triggerOnce: true,
   });
 
-  console.log(inView)
-
   return (
     <Box id="plans" sx={{ py: 8, position: "relative" }}>
       {isMobile ? (
@@ -51,6 +49,11 @@ export default function Plans() {
           className="plans-container"
           sx={{ flexDirection: isMobile ? "column" : "row" }}
         >
+          <SectionTitle
+            title="המסע שלנו ביחד..."
+            className="plans-title"
+            variant={"h2"}
+          />
           <Box
             sx={{
               position: isMobile ? "static" : "sticky",
@@ -58,11 +61,6 @@ export default function Plans() {
               height: isMobile ? "unset" : "250px",
             }}
           >
-            <SectionTitle
-              title="המסע שלנו ביחד..."
-              className="plans-title"
-              variant={isMiniMobile ? "h3" : "h2"}
-            />
             <Typography variant={isMiniMobile ? "h6" : "h5"} color="#697565">
               אני כאן כדי ללוות אותך צעד צעד, להפוך רעיונות למציאות - ושהכל
               ירגיש בדיוק אתה.
@@ -116,11 +114,15 @@ export default function Plans() {
                     sx={{
                       display: "flex",
                       flexDirection: "column",
-                      alignItems: "flex-start",
+                      alignItems: "center",
                     }}
                   >
                     {item.desc.map((part, i) => (
-                      <Typography key={i} textAlign={"right"} variant="body1">
+                      <Typography
+                        key={i}
+                        sx={{ fontSize: "18px", textAlign: "center" }}
+                        variant="body1"
+                      >
                         {part}
                       </Typography>
                     ))}
@@ -193,7 +195,12 @@ export default function Plans() {
                     }}
                   >
                     {item.desc.map((part, i) => (
-                      <Typography key={i} textAlign={"right"} variant="body1">
+                      <Typography
+                        key={i}
+                        textAlign={"right"}
+                        variant="body1"
+                        sx={{ fontSize: "20px", textAlign: "center" }}
+                      >
                         {part}
                       </Typography>
                     ))}

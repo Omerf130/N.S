@@ -5,29 +5,71 @@ import { useMediaMatch } from "../hooks/useMediaMatch";
 const Spacial = () => {
   const isMobile = useMediaMatch("(max-width: 500px)");
   return (
-    <Box id="services">
-      <Container className="services">
-        <SectionTitle
-          title="ההתמחות שלי"
-          className="services-title"
-          variant="h2"
-        />
-        <Paper
-          // className="services-list"
+    <Box
+      id="spacial"
+      sx={{
+        py: 8,
+        px: 6,
+        display: "flex",
+        "@media (max-width:750px)": {
+          flexDirection: "column",
+        },
+        position: "relative",
+        zIndex: 2,
+      }}
+    >
+      <Container
+        sx={{
+          display: "flex",
+          flexDirection: "row-reverse",
+          gap: 4,
+          alignItems: "center",
+          "@media (max-width:750px)": {
+            flexDirection: "column-reverse",
+          },
+        }}
+      >
+        <Box
           sx={{
-            backgroundColor: "transparent",
-            border: "none",
-            boxShadow: "unset",
+            backgroundImage: 'url("/pics/spacial.jpeg")',
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            flexShrink: 0,
+            borderRadius: "10px",
+            width: "calc(35vw - 4px)",
+            height: "calc(50vw - 6px)",
+            "@media (max-width:750px)": {
+              width: "calc(120% - 16px)",
+              height: "calc(110vw - 8px)",
+            },
+
+            maxWidth: 500,
+            maxHeight: 650,
+          }}
+        />
+        <Container
+          sx={{
+            maxWidth: "sm",
+            padding: "0",
+            display: "flex",
+            flexDirection: "column",
+            gap: "30px",
+            direction:"rtl"
           }}
         >
-          <Box>
-            <Typography variant={isMobile ? "h6" : "h5"}>
-              התחום שבו אני מתמחה במיוחד הוא עיצוב מטבחים, הלב הפועם של כל בית.
-              אני יוצרת חללים שמביאים יחד פרקטיות, נוחות וסטייל, תוך מחשבה על כל
-              פרט - מתכנון הארונות ועד תאורה, חומרים וזרימה במרחב.
-            </Typography>
-          </Box>
-        </Paper>
+          <SectionTitle
+            title="ההתמחות שלי"
+            className="services-title"
+            variant="h2"
+          />
+          <Typography variant={isMobile ? "h6" : "h5"}>
+            התחום שבו אני מתמחה במיוחד הוא עיצוב מטבחים, הלב הפועם של כל בית.
+          </Typography>
+          <Typography variant={isMobile ? "h6" : "h5"}>
+            אני יוצרת חללים שמביאים יחד פרקטיות, נוחות וסטייל, תוך מחשבה על כל
+            פרט - מתכנון הארונות ועד תאורה, חומרים וזרימה במרחב.
+          </Typography>
+        </Container>
       </Container>
     </Box>
   );

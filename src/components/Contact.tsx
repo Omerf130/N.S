@@ -52,7 +52,7 @@ const Contact = () => {
           position: "relative",
           borderRadius: "10px",
           color:"#000",
-          maxWidth:"700px !important",
+          maxWidth:"1200px !important",
           display:"flex",
           flexDirection:"column",
           alignItems:"center",
@@ -75,6 +75,7 @@ const Contact = () => {
               marginTop: "-30px",
               borderRadius: "10px",
               border: "none",
+              width:"75%"
             }}
           >
             <SectionTitle
@@ -83,7 +84,7 @@ const Contact = () => {
               variant="h2"
             />
             <SectionTitle
-            title="זה הזמן להגשים את החלום העיצובי שלך, אני כאן בשבילך"
+            title="זה הזמן להגשים את החלום העיצובי שלך - אני כאן בשבילך"
             className="contact-title"
             variant="h5"
             />
@@ -128,7 +129,7 @@ const Contact = () => {
               disabled={!isFormValid}
               fullWidth
             >
-              שלח בוואטסאפ
+              לוח ההשראה שלך - מתחיל כאן
             </Button>
           </Box>
           <Box>

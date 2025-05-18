@@ -12,9 +12,9 @@ const services = [
 const Services = () => {
     const isMobile = useMediaMatch("(max-width: 500px)");
   return (
-    <Box id="services">
+    <Box id="services" sx={{ py: 8, position: "relative" }}>
       <Container className="services">
-        <SectionTitle title="שירותים" className="services-title" variant="h2" />
+        <SectionTitle title="השירותים שלי" className="services-title" variant="h2" />
         <Paper
           className="services-list"
           sx={{
@@ -24,8 +24,8 @@ const Services = () => {
           }}
         >
           {services.map((service) => (
-            <Box>
-              <Box key={service.id}></Box>
+            <Box key={service.id}>
+              <Box></Box>
               <Typography variant={isMobile ? "h6" : "h5"}>{service.text}</Typography>
             </Box>
           ))}

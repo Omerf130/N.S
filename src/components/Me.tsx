@@ -5,7 +5,7 @@ import { useMediaMatch } from "../hooks/useMediaMatch";
 const Me = () => {
   const isMobile = useMediaMatch("(max-width: 500px)");
   return (
-    <Box id="services">
+    <Box id="me">
       <Container className="services">
         <SectionTitle
           title="האני מאמין שלי"
@@ -24,8 +24,9 @@ const Me = () => {
             <Typography variant={isMobile ? "h6" : "h5"}>
               עיצוב פנים עבורי הוא הרבה מעבר ליופי - הוא יצירה של חוויה
               יום-יומית. אני מאמינה שבית אמור לא רק להיראות טוב, אלא גם להרגיש
-              נכון. לשם כך, אני משלבת בין דיוק תכנוני, הקשבה עמוקה והרבה רגש.
+              נכון.
             </Typography>
+            <Typography variant={isMobile ? "h6" : "h5"}>לשם כך, אני משלבת בין דיוק תכנוני, הקשבה עמוקה והרבה רגש.</Typography>
             <Typography variant={isMobile ? "h6" : "h5"} sx={{marginTop:"7px"}}>
               אני לא עובדת עם תבניות - כל פרויקט נולד מתוך האדם שמאחוריו.
             </Typography>

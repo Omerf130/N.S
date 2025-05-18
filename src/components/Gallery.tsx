@@ -5,12 +5,12 @@ import { Box } from "@mui/material";
 import SectionTitle from "../common/SectionTitle";
 
 const galleryItems = [
-  { id: 1, src: "/pics/gallery/gallery1.jpeg", alt: "image1" },
+  { id: 1, src: "/pics/gallery/gallery6.jpeg", alt: "image1" },
   { id: 2, src: "/pics/gallery/gallery2.jpeg", alt: "image2" },
   { id: 3, src: "/pics/gallery/gallery3.jpeg", alt: "image3" },
   { id: 4, src: "/pics/gallery/gallery4.jpeg", alt: "image4" },
   { id: 5, src: "/pics/gallery/gallery5.jpeg", alt: "image5" },
-  { id: 6, src: "/pics/gallery/gallery6.jpeg", alt: "image6" },
+  { id: 6, src: "/pics/gallery/gallery1.jpeg", alt: "image6" },
   { id: 7, src: "/pics/gallery/gallery7.jpeg", alt: "image7" },
   { id: 8, src: "/pics/gallery/gallery8.jpeg", alt: "image8" },
   { id: 9, src: "/pics/gallery/gallery9.jpeg", alt: "image9" },
@@ -43,7 +43,7 @@ const Gallery = () => {
     <Box id="gallery" >
       <div >
       <SectionTitle
-          title="מהדמיון... למציאות"
+          title="מהדמיון... למציאות 💫" 
           className="gallery-title"
           variant="h2"
         />
