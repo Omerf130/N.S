@@ -1,4 +1,4 @@
-import { Box, Container, Paper, Typography } from "@mui/material";
+import { Box, Container, Typography } from "@mui/material";
 import SectionTitle from "../common/SectionTitle";
 import { useMediaMatch } from "../hooks/useMediaMatch";
 
