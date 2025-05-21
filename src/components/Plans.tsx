@@ -63,7 +63,7 @@ export default function Plans() {
           >
             <Typography variant={isMiniMobile ? "h6" : "h5"} color="#697565">
               אני כאן כדי ללוות אותך צעד צעד, להפוך רעיונות למציאות - ושהכל
-              ירגיש בדיוק אתה.
+              ירגיש בדיוק את/ה.
             </Typography>
           </Box>
           <Box
@@ -212,7 +212,7 @@ export default function Plans() {
           <Typography
             variant={isMiniMobile ? "h6" : "h5"}
             color="#697565"
-            sx={{ textAlign: "center" }}
+            sx={{ textAlign: "center" , fontSize:"35px"}}
           >
             אני כאן כדי ללוות אותך צעד צעד, להפוך רעיונות למציאות - ושהכל ירגיש
             בדיוק את/ה.

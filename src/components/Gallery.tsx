@@ -106,7 +106,7 @@ const Gallery = () => {
             </SplideSlide>
           ))}
         </Splide>
-        <Typography sx={{textAlign:"center", paddingTop:"30px", fontSize:"40px"}}>
+        <Typography sx={{textAlign:"center", paddingTop:"30px", fontSize:"35px"}}>
           .אם העיצובים האלה גרמו לכם לחייך, לדמיין או לדפדף שוב - כנראה שנועדנו
           לעבוד יחד
         </Typography>
