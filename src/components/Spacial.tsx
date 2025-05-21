@@ -9,7 +9,7 @@ const Spacial = () => {
       id="spacial"
       sx={{
         py: 8,
-        px: 6,
+        px: 0,
         display: "flex",
         "@media (max-width:750px)": {
           flexDirection: "column",
@@ -53,18 +53,17 @@ const Spacial = () => {
             padding: "0",
             display: "flex",
             flexDirection: "column",
-            gap: "30px",
             direction:"rtl",
             textAlign:"center"
           }}
         >
           <SectionTitle
             title="ההתמחות שלי"
-            className="services-title"
+            className="spacial-title"
             variant="h2"
           />
           <Typography variant={isMobile ? "h6" : "h5"}>
-            התחום שבו אני מתמחה במיוחד הוא עיצוב מטבחים, הלב הפועם של כל בית
+            התחום שבו אני מתמחה במיוחד הוא עיצוב מטבחים, הלב הפועם של כל בית.
           </Typography>
           <Typography variant={isMobile ? "h6" : "h5"}>
             אני יוצרת חללים שמביאים יחד פרקטיות, נוחות וסטייל, תוך מחשבה על כל

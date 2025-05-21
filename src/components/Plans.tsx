@@ -107,7 +107,7 @@ export default function Plans() {
                 >
                   {item.icon}
 
-                  <Typography variant="h5" gutterBottom sx={{color:"#2d5221"}}>
+                  <Typography variant="h5" gutterBottom sx={{color:"#2d5221",fontWeight:"bold"}}>
                     {item.title}
                   </Typography>
                   <Box
@@ -184,7 +184,7 @@ export default function Plans() {
                     },
                   }}
                 >
-                  <Typography variant="h5" gutterBottom sx={{color:"#2d5221"}}>
+                  <Typography variant="h5" gutterBottom sx={{color:"#2d5221", fontWeight:"bold"}}>
                     {item.title}
                   </Typography>
                   <Box
