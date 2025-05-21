@@ -95,7 +95,7 @@ export default function About() {
               gap:5,
             }}
           >
-            <Typography fontSize={30} color="#fff">
+            <Typography fontSize={isMobile ? 20 : 30} color="#fff">
               הפגישה הראשונה עליי - בואו נתחיל
             </Typography>
             <FaPhoneAlt size={30} color="#fff" />
