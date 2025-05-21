@@ -53,7 +53,9 @@ export default function About() {
             padding: "0",
             display: "flex",
             flexDirection: "column",
+            height:"100%",
             gap: "30px",
+            justifyContent:"space-between"
           }}
         >
           <Typography variant={isMobile ? "h6" : "h5"} color="#697565">
@@ -65,6 +67,7 @@ export default function About() {
             className="about-title"
             variant={isMobile ? "h3" : "h2"}
           />
+          <Box sx={{display:"flex", flexDirection:"column", gap:5}}>
           <Typography variant={isMobile ? "h6" : "h5"} color="#697565">
             אני נזי שרון, מעצבת פנים עם התמחות בעיצוב מטבחים.
           </Typography>
@@ -77,6 +80,7 @@ export default function About() {
             בין פונקציונליות לאסתטיקה, בין חלום למציאות - אני יוצרת חללים
             שמשקפים את האישיות והמהות שלכם.
           </Typography>
+          </Box>
           <Button
             className="nav-item"
             href="#contact"
@@ -86,12 +90,16 @@ export default function About() {
               backgroundColor: "rgba(0,0,0,0.8)",
               color: "#fff",
               borderRadius: "8px",
+              marginBottom:"-7px",
+              display:"flex",
+              alignItems:"center",
+              gap:5,
             }}
           >
-            <RiContactsLine size={30} color="#fff" />
             <Typography fontSize={30} color="#fff">
-              שיחה עם נזי
+              הפגישה הראשונה עליי - בואו נתחיל
             </Typography>
+            <RiContactsLine size={30} color="#fff" />
           </Button>
         </Container>
       </Container>
