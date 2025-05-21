@@ -63,8 +63,9 @@ const Spacial = () => {
             variant="h2"
           />
           <Typography variant={isMobile ? "h6" : "h5"}>
-            התחום שבו אני מתמחה במיוחד הוא עיצוב מטבחים, הלב הפועם של כל בית.
+            התחום שבו אני מתמחה במיוחד הוא עיצוב מטבחים,
           </Typography>
+          <Typography variant={isMobile ? "h6" : "h5"}>הלב הפועם של כל בית.</Typography>
           <Typography variant={isMobile ? "h6" : "h5"}>
             אני יוצרת חללים שמביאים יחד פרקטיות, נוחות וסטייל, תוך מחשבה על כל
             פרט - מתכנון הארונות ועד תאורה, חומרים וזרימה במרחב.
