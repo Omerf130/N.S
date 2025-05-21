@@ -1,7 +1,7 @@
 import { Box, Button, Container, Typography } from "@mui/material";
 import SectionTitle from "../common/SectionTitle";
 import { useMediaMatch } from "../hooks/useMediaMatch";
-import { RiContactsLine } from "react-icons/ri";
+import { FaPhoneAlt } from "react-icons/fa";
 
 export default function About() {
   const isMobile = useMediaMatch("(max-width: 500px)");
@@ -87,8 +87,7 @@ export default function About() {
             sx={{
               left: "10px",
               bottom: "10px",
-              backgroundColor: "rgba(0,0,0,0.8)",
-              color: "#fff",
+              backgroundColor: "#3c4d37",
               borderRadius: "8px",
               marginBottom:"-7px",
               display:"flex",
@@ -99,7 +98,7 @@ export default function About() {
             <Typography fontSize={30} color="#fff">
               הפגישה הראשונה עליי - בואו נתחיל
             </Typography>
-            <RiContactsLine size={30} color="#fff" />
+            <FaPhoneAlt size={30} color="#fff" />
           </Button>
         </Container>
       </Container>
