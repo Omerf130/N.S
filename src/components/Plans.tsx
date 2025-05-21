@@ -61,7 +61,7 @@ export default function Plans() {
               height: isMobile ? "unset" : "250px",
             }}
           >
-            <Typography variant={isMiniMobile ? "h6" : "h5"} color="#697565">
+            <Typography variant={isMiniMobile ? "h6" : "h5"} color="#697565" textAlign="center">
               אני כאן כדי ללוות אותך צעד צעד, להפוך רעיונות למציאות - ושהכל
               ירגיש בדיוק את/ה.
             </Typography>
