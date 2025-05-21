@@ -20,7 +20,7 @@ const Me = () => {
             boxShadow: "unset",
           }}
         >
-          <Box>
+          <Box sx={{textAlign:"center"}}>
             <Typography variant={isMobile ? "h6" : "h5"}>
               עיצוב פנים עבורי הוא הרבה מעבר ליופי - הוא יצירה של חוויה
               יום-יומית.
