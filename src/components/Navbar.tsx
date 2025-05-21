@@ -13,6 +13,7 @@ import { DICT } from "../consts";
 import { FaTiktok } from "react-icons/fa";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
+import { RiContactsLine } from "react-icons/ri";
 
 const sections = [
   { label: DICT.about, id: "about" },
@@ -41,6 +42,14 @@ function Navbar() {
 
   return (
     <AppBar className="nav-wrapper" position="static">
+      <Button
+        className="nav-item"
+        href="#contact"
+        sx={{ position:"fixed", left:"10px", bottom:"10px", backgroundColor:"rgba(255,255,255,0.8)", borderRadius:"8px"}}
+      >
+        <RiContactsLine size={30}/>
+        <Typography fontSize={30}>שיחה עם נזי</Typography>
+      </Button>
       <Container maxWidth="xl">
         <Toolbar
           disableGutters

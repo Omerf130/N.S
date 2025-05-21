@@ -1,7 +1,7 @@
 import { useRef, useEffect, useState } from "react";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/splide/dist/css/splide.min.css";
-import { Box } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import SectionTitle from "../common/SectionTitle";
 
 const galleryItems = [
@@ -40,10 +40,10 @@ const Gallery = () => {
   }, [splideInstances]);
 
   return (
-    <Box id="gallery" >
-      <div >
-      <SectionTitle
-          title="מהדמיון... למציאות 💫" 
+    <Box id="gallery">
+      <div style={{position:"relative"}}>
+        <SectionTitle
+          title="מהדמיון... למציאות 💫"
           className="gallery-title"
           variant="h2"
         />
@@ -106,6 +106,10 @@ const Gallery = () => {
             </SplideSlide>
           ))}
         </Splide>
+        <Typography sx={{textAlign:"center", paddingTop:"30px", fontSize:"35px"}}>
+          אם העיצובים האלה גרמו לכם לחייך, לדמיין או לדפדף שוב - כנראה שנועדנו
+          לעבוד יחד.
+        </Typography>
       </div>
     </Box>
   );

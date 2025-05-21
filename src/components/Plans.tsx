@@ -107,7 +107,7 @@ export default function Plans() {
                 >
                   {item.icon}
 
-                  <Typography variant="h5" gutterBottom>
+                  <Typography variant="h5" gutterBottom sx={{color:"#2d5221"}}>
                     {item.title}
                   </Typography>
                   <Box
@@ -184,7 +184,7 @@ export default function Plans() {
                     },
                   }}
                 >
-                  <Typography variant="h5" gutterBottom>
+                  <Typography variant="h5" gutterBottom sx={{color:"#2d5221"}}>
                     {item.title}
                   </Typography>
                   <Box
@@ -215,7 +215,7 @@ export default function Plans() {
             sx={{ textAlign: "center" }}
           >
             אני כאן כדי ללוות אותך צעד צעד, להפוך רעיונות למציאות - ושהכל ירגיש
-            בדיוק אתה.
+            בדיוק את/ה.
           </Typography>
         </Container>
       )}

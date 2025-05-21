@@ -23,11 +23,18 @@ const Me = () => {
           <Box>
             <Typography variant={isMobile ? "h6" : "h5"}>
               עיצוב פנים עבורי הוא הרבה מעבר ליופי - הוא יצירה של חוויה
-              יום-יומית. אני מאמינה שבית אמור לא רק להיראות טוב, אלא גם להרגיש
-              נכון.
+              יום-יומית.
             </Typography>
-            <Typography variant={isMobile ? "h6" : "h5"}>לשם כך, אני משלבת בין דיוק תכנוני, הקשבה עמוקה והרבה רגש.</Typography>
-            <Typography variant={isMobile ? "h6" : "h5"} sx={{marginTop:"7px"}}>
+            <Typography variant={isMobile ? "h6" : "h5"}>
+              אני מאמינה שבית אמור לא רק להיראות טוב, אלא גם להרגיש נכון
+            </Typography>
+            <Typography variant={isMobile ? "h6" : "h5"}>
+              לשם כך, אני משלבת בין דיוק תכנוני, הקשבה עמוקה והרבה רגש.
+            </Typography>
+            <Typography
+              variant={isMobile ? "h6" : "h5"}
+              sx={{ marginTop: "7px" }}
+            >
               אני לא עובדת עם תבניות - כל פרויקט נולד מתוך האדם שמאחוריו.
             </Typography>
           </Box>
