@@ -45,7 +45,7 @@ function Navbar() {
       <Button
         className="nav-item"
         href="#contact"
-        sx={{ position:"fixed", left:"10px", bottom:"10px", backgroundColor:"rgba(0,0,0,0.8)",color:"#fff" ,borderRadius:"8px"}}
+        sx={{ position:"fixed", left:"10px", bottom:"10px", backgroundColor:"#3c4d37",color:"#fff" ,borderRadius:"8px"}}
       >
         <RiContactsLine size={30} color="#fff"/>
         <Typography fontSize={30} color="#fff">שיחה עם נזי</Typography>
